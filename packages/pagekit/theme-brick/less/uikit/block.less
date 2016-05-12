@@ -1,0 +1,72 @@
+//
+// Component: Block
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@block-padding-vertical:                        50px;
+@block-padding-vertical-large:                  90px;
+
+@block-large-padding-vertical-large:            200px;
+
+@block-default-background:                      @global-background;
+
+@block-secondary-background:                    #252522;
+
+//
+// New
+//
+
+@block-padding-horizontal:                      30px;
+@block-xlarge-padding-horizontal:               100px;
+
+
+// Component
+// ========================================================================
+
+.hook-block() {
+    padding-left: @block-padding-horizontal;
+    padding-right: @block-padding-horizontal;
+}
+
+
+// Color modifier
+// ========================================================================
+
+.hook-block-default() {}
+
+.hook-block-muted() {}
+
+.hook-block-secondary() {}
+
+.hook-block-primary() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-block-misc() {
+
+    /* Large screen and bigger */
+    @media (min-width: @breakpoint-xlarge) {
+
+        .uk-block {
+            padding-left: @block-xlarge-padding-horizontal;
+            padding-right: @block-xlarge-padding-horizontal;
+        }
+
+    }
+
+    /*
+     * Adjust padding between equal colored blocks
+     */
+
+    .uk-block-default + .uk-block-default,
+    .uk-block-muted + .uk-block-muted,
+    .uk-block-primary + .uk-block-primary,
+    .uk-block-secondary + .uk-block-secondary { padding-top: 0; }
+
+}

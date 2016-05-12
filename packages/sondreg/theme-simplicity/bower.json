@@ -1,0 +1,7 @@
+{
+  "name": "theme-simplicity",
+  "dependencies": {
+    "uikit": "#master"
+  },
+  "private": true
+}

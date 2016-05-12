@@ -1,0 +1,89 @@
+//
+// Component: Article
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@article-margin-top:                            60px;
+
+@article-title-font-size:                       30px;
+@article-title-line-height:                     40px;
+@article-title-font-weight:                     300;
+@article-title-text-transform:                  uppercase;
+
+@article-meta-font-size:                        round((@global-font-size * 0.85)); // 12px / 14px
+@article-meta-line-height:                      round((@article-meta-font-size * 1.46)); // 18px / 20px
+@article-meta-color:                            @global-muted-color;
+
+@article-lead-color:                            @global-dark-color;
+@article-lead-font-size:                        round((@global-font-size * 1.06)); // 17px
+@article-lead-line-height:                      round((@article-lead-font-size * 1.47)); // 27px
+@article-lead-font-weight:                      300;
+
+@article-divider-margin:                        @global-margin-large;
+@article-divider-border:                        @global-border;
+
+//
+// New
+//
+
+@article-title-hover-color:                     lighten(@global-dark-color, 30%);
+@article-large-margin-top:                      90px;
+
+
+// Sub-object `uk-article-title`
+// ========================================================================
+
+.hook-article-title() {}
+
+
+// Sub-object `uk-article-meta`
+// ========================================================================
+
+.hook-article-meta() {
+
+    a { color: @article-meta-color; }
+
+    a:hover {
+        color: @global-link-hover-color;
+        text-decoration: none;
+    }
+
+}
+
+
+// Sub-object `uk-article-lead`
+// ========================================================================
+
+.hook-article-lead() {}
+
+
+// Sub-object `uk-article-divider`
+// ========================================================================
+
+.hook-article-divider() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-article-misc() {
+
+    .uk-article-title a {
+        -webkit-transition: color .2s ease;
+        transition: color .2s ease;
+    }
+
+    .uk-article-title a:hover { color: @article-title-hover-color; }
+
+    /* Tablet and bigger */
+    @media (min-width: @breakpoint-medium) {
+
+        .uk-article + .uk-article { margin-top: @article-large-margin-top; }
+
+    }
+
+}

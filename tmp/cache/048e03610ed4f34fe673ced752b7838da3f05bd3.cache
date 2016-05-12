@@ -1,0 +1,86 @@
+<?php return array (
+  'lifetime' => 0,
+  'data' => 
+  array (
+    'class' => 'Bixie\\Formmaker\\Model\\Field',
+    'eventPrefix' => 'formmaker_field',
+    'events' => 
+    array (
+      'saving' => 
+      array (
+        0 => 'saving',
+      ),
+    ),
+    'fields' => 
+    array (
+      'id' => 
+      array (
+        'name' => 'id',
+        'type' => 'integer',
+        'id' => true,
+        'column' => 'id',
+      ),
+      'form_id' => 
+      array (
+        'name' => 'form_id',
+        'type' => 'integer',
+        'column' => 'form_id',
+      ),
+      'priority' => 
+      array (
+        'name' => 'priority',
+        'type' => 'integer',
+        'column' => 'priority',
+      ),
+      'type' => 
+      array (
+        'name' => 'type',
+        'type' => 'string',
+        'column' => 'type',
+      ),
+      'label' => 
+      array (
+        'name' => 'label',
+        'type' => 'string',
+        'column' => 'label',
+      ),
+      'slug' => 
+      array (
+        'name' => 'slug',
+        'type' => 'string',
+        'column' => 'slug',
+      ),
+      'options' => 
+      array (
+        'name' => 'options',
+        'type' => 'json_array',
+        'column' => 'options',
+      ),
+      'data' => 
+      array (
+        'name' => 'data',
+        'type' => 'json_array',
+        'column' => 'data',
+      ),
+      'roles' => 
+      array (
+        'name' => 'roles',
+        'type' => 'simple_array',
+        'column' => 'roles',
+      ),
+    ),
+    'isMappedSuperclass' => false,
+    'relations' => 
+    array (
+      'form' => 
+      array (
+        'name' => 'form',
+        'type' => 'BelongsTo',
+        'targetEntity' => 'Bixie\\Formmaker\\Model\\Form',
+        'keyFrom' => 'form_id',
+        'keyTo' => NULL,
+      ),
+    ),
+    'table' => '@formmaker_field',
+  ),
+);

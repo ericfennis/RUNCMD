@@ -1,0 +1,159 @@
+//
+// Component: Contrast
+//
+// ========================================================================
+
+@contrast-color:                                 @global-contrast-color;
+@contrast-inverted-color:                        #fff;
+
+@contrast-base-hr-border:                        fade(@contrast-color, 5%);
+
+@contrast-nav-side-hover-background:             transparent;
+@contrast-nav-side-active-background:            transparent;
+@contrast-nav-side-divider-border:               fade(@contrast-color, 5%);
+
+@contrast-subnav-pill-hover-background:          fade(@contrast-color, 10%);
+@contrast-subnav-pill-active-color:              @global-dark-color;
+
+@contrast-list-line-border:                      fade(@contrast-color, 5%);
+
+@contrast-tab-hover-border:                      rgba(0,0,0,0);
+@contrast-tab-hover-background:                  rgba(0,0,0,0);
+@contrast-tab-hover-color:                       @contrast-color;
+@contrast-tab-active-color:                      @global-dark-color;
+
+@contrast-form-border:                           fade(@contrast-color, 50%);
+@contrast-form-background:                       transparent;
+@contrast-form-focus-background:                 transparent;
+
+@contrast-button-color:                          @global-dark-color;
+@contrast-button-background:                     @contrast-color;
+@contrast-button-hover-color:                    @contrast-color;
+@contrast-button-hover-background:               transparent;
+@contrast-button-active-background:              transparent;
+@contrast-button-active-color:                   @contrast-color;
+
+@contrast-button-primary-background:             @contrast-color;
+@contrast-button-primary-color:                  @global-dark-color;
+@contrast-button-primary-hover-background:       fade(@contrast-button-primary-background, 80%);
+@contrast-button-primary-hover-color:            @global-dark-color;
+@contrast-button-primary-active-background:      darken(@contrast-button-primary-hover-background, 10%);
+@contrast-button-primary-active-color:           @global-dark-color;
+
+@contrast-icon-hover-color:                      fade(@contrast-color, 50%);
+@contrast-icon-button-background:                transparent;
+@contrast-icon-button-hover-background:          @contrast-inverted-color;
+@contrast-icon-button-hover-color:               @global-dark-color;
+@contrast-icon-button-active-background:         @contrast-icon-button-hover-background;
+@contrast-icon-button-active-color:              @global-dark-color;
+
+@contrast-text-muted-color:                      fade(@contrast-color, 80%);
+@contrast-text-primary-color:                    #f0615c;
+
+//
+// New
+//
+
+@contrast-button-border:                         @contrast-color;
+@contrast-button-hover-border:                   fade(@contrast-color, 70%);
+
+
+// Base
+// ========================================================================
+
+.hook-contrast-base-code() {
+    border-color: fade(@contrast-color, 20%);
+    background: fade(@contrast-color, 10%);
+}
+
+
+// Nav
+// ========================================================================
+
+.hook-contrast-nav-side() { border-top-color: fade(@contrast-color, 5%); }
+
+.hook-contrast-nav-side-hover() {}
+.hook-contrast-nav-side-active() {}
+.hook-contrast-nav-side-header() {}
+.hook-contrast-nav-side-divider() {}
+
+
+// Subnav
+// ========================================================================
+
+.hook-contrast-subnav() {}
+.hook-contrast-subnav-hover() {}
+.hook-contrast-subnav-active() {}
+.hook-contrast-subnav-line-divider() {}
+.hook-contrast-subnav-pill-hover() {}
+.hook-contrast-subnav-pill-active() {}
+
+
+// Tab
+// ========================================================================
+
+.hook-contrast-tab() {}
+.hook-contrast-tab-hover() {}
+.hook-contrast-tab-active() {}
+
+
+// List
+// ========================================================================
+
+.hook-contrast-list-line() {}
+
+
+// Form
+// ========================================================================
+
+.hook-contrast-form() {}
+.hook-contrast-form-focus() {}
+
+
+// Button
+// ========================================================================
+
+.hook-contrast-button() {
+
+    &:not(.uk-button-primary) { border-color: @contrast-button-border; }
+
+}
+
+.hook-contrast-button-hover() {
+
+    &:not(.uk-button-primary) { border-color: @contrast-button-hover-border; }
+
+}
+
+.hook-contrast-button-active() {}
+
+.hook-contrast-button-primary() {}
+
+.hook-contrast-button-primary-hover() {}
+.hook-contrast-button-primary-active() {}
+
+
+// Icon
+// ========================================================================
+
+.hook-contrast-icon-hover() {}
+.hook-contrast-icon-hover-hover() {}
+.hook-contrast-icon-button() {}
+
+.hook-contrast-icon-button-hover() { border-color: @contrast-icon-button-hover-background; }
+
+.hook-contrast-icon-button-active() { border-color: @contrast-icon-button-active-background; }
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-contrast-misc() {
+
+    .uk-nav-side .uk-nav-sub {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-top: none;
+
+    }
+
+}

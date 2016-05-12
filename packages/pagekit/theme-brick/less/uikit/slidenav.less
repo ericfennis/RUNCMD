@@ -1,0 +1,56 @@
+//
+// Component: Slidenav
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@slidenav-width:                                60px;
+@slidenav-font-size:                            25px;
+
+@slidenav-previous-icon:                        "";
+@slidenav-next-icon:                            "";
+
+@slidenav-position-previous:                    0;
+
+
+// Component
+// ========================================================================
+
+.hook-slidenav() {}
+
+.hook-slidenav-hover() { opacity: 0.5; }
+
+.hook-slidenav-active() {}
+
+.hook-slidenav-contrast() {}
+
+.hook-slidenav-contrast-hover() {}
+
+.hook-slidenav-contrast-active() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-slidenav-misc() {
+
+    .uk-slidenav {
+        background-image: url("@{global-image-path}/arrow.svg");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+    }
+
+    .uk-slidenav-previous { background-position: 0 -60px; }
+
+    .uk-slidenav-next:hover { right: -5px; }
+    .uk-slidenav-previous:hover { left: -5px; }
+
+    .uk-slidenav-contrast { background-image: url("@{global-image-path}/arrow-contrast.svg"); }
+    .uk-slidenav-contrast .uk-slidenav-previous { background-position: 0 -60px; }
+
+}

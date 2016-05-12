@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="60px" height="120px" viewBox="0 0 60 120" enable-background="new 0 0 60 120" xml:space="preserve">
+<polygon points="31,22 29.586,23.414 35.172,29 21,29 21,31 35.172,31 29.586,36.586 31,38 39,30 "/>
+<polygon points="39,89 24.828,89 30.414,83.414 29,82 21,90 29,98 30.414,96.586 24.828,91 39,91 "/>
+</svg>

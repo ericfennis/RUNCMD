@@ -1,0 +1,79 @@
+//
+// Component: Badge
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@badge-background:                              transparent;
+@badge-padding-horizontal:                      0;
+@badge-font-size:                               12px;
+@badge-font-weight:                             400;
+@badge-line-height:                             20px;
+@badge-color:                                   @global-muted-color;
+@badge-hover-color:                             @global-contrast-color;
+
+@badge-notification-font-size:                  round((@global-font-size * 0.78)); // 11px / 12px
+@badge-notification-line-height:                round((@badge-notification-font-size * 1.81)); // 20px / 22px
+
+@badge-success-background:                      transparent;
+@badge-warning-background:                      transparent;
+@badge-danger-background:                       transparent;
+
+
+// Component
+// ========================================================================
+
+.hook-badge() { border-bottom: 2px solid transparent; }
+
+
+// Color modifier
+// ========================================================================
+
+//
+// Modifier: `badge-success`
+//
+
+.hook-badge-success() {
+    border-bottom-color: @global-success-background;
+    color: @global-dark-color;
+}
+
+//
+// Modifier: `badge-warning`
+//
+
+.hook-badge-warning() {
+    border-bottom-color: @global-warning-background;
+    color: @global-dark-color;
+}
+
+//
+// Modifier: `badge-danger`
+//
+
+.hook-badge-danger() {
+    border-bottom-color: @global-danger-background;
+    color: @global-dark-color;
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-badge-misc() {
+
+    .uk-badge-notification {
+        padding: 0 7px;
+        border-bottom: none;
+        background: #000;
+        color: @global-contrast-color;
+    }
+
+    .uk-badge-notification.uk-badge-success { background: @global-success-background; }
+    .uk-badge-notification.uk-badge-warning { background: @global-warning-background; }
+    .uk-badge-notification.uk-badge-danger { background: @global-danger-background; }
+
+}

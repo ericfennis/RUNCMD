@@ -1,0 +1,174 @@
+//
+// Component: Button
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@button-height:                                 @global-height;
+@button-mini-height:                            @global-height-mini;
+@button-small-height:                           @global-height-small;
+@button-large-height:                           @global-height-large;
+
+@button-line-height:                            @global-height - 2;
+@button-mini-line-height:                       @global-height-mini - 2;
+@button-small-line-height:                      @global-height-small - 2;
+@button-large-line-height:                      @global-height-large - 2;
+
+@button-mini-font-size:                         10px;
+@button-small-font-size:                        12px;
+@button-large-font-size:                        14px;
+
+@button-padding-horizontal:                     20px;
+@button-mini-padding-horizontal:                8px;
+@button-small-padding-horizontal:               12px;
+@button-large-padding-horizontal:               35px;
+
+@button-font-size:                              12px;
+@button-background:                             #333333;
+@button-color:                                  @global-contrast-color;
+@button-hover-background:                       transparent;
+@button-hover-color:                            @button-background;
+@button-active-background:                      transparent;
+@button-active-color:                           @button-background;
+
+@button-primary-background:                     @global-primary-background;
+@button-primary-color:                          @global-contrast-color;
+@button-primary-hover-background:               @global-primary-hover-background;
+@button-primary-hover-color:                    @global-contrast-color;
+@button-primary-active-background:              @global-primary-active-background;
+@button-primary-active-color:                   @global-contrast-color;
+
+@button-success-background:                     @global-success-background;
+@button-success-color:                          @global-contrast-color;
+@button-success-hover-background:               @global-success-hover-background;
+@button-success-hover-color:                    @global-contrast-color;
+@button-success-active-background:              @global-success-active-background;
+@button-success-active-color:                   @global-contrast-color;
+
+@button-danger-background:                      @global-danger-background;
+@button-danger-color:                           @global-contrast-color;
+@button-danger-hover-background:                @global-danger-hover-background;
+@button-danger-hover-color:                     @global-contrast-color;
+@button-danger-active-background:               @global-danger-active-background;
+@button-danger-active-color:                    @global-contrast-color;
+
+@button-disabled-background:                    @global-default-background;
+@button-disabled-color:                         fade(@button-hover-color, 30%);
+
+@button-link-color:                             @global-muted-color;
+@button-link-hover-color:                       @global-dark-color;
+@button-link-hover-text-decoration:             none;
+@button-link-disabled-color:                    @global-muted-color;
+
+//
+// New
+//
+
+@button-font-family:                            'Montserrat';
+@button-text-transform:                         uppercase;
+
+
+// Component
+// ========================================================================
+
+.hook-button() {
+    border: 1px solid transparent;
+    font-family: @button-font-family;
+    text-transform: @button-text-transform;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.hook-button-hover() { border-color: @button-background; }
+
+.hook-button-active() { border-color: @button-background; }
+
+
+// Color modifiers
+// ========================================================================
+
+//
+// Modifier: `uk-button-primary`
+//
+
+.hook-button-primary() { border-color: transparent; }
+
+.hook-button-primary-hover() { border-color: transparent; }
+
+.hook-button-primary-active() { border-color: transparent; }
+
+//
+// Modifier: `uk-button-success`
+//
+
+.hook-button-success() { border-color: transparent; }
+
+.hook-button-success-hover() { border-color: transparent; }
+
+.hook-button-success-active() { border-color: transparent; }
+
+//
+// Modifier: `uk-button-danger`
+//
+
+.hook-button-danger() { border-color: transparent; }
+
+.hook-button-danger-hover() { border-color: transparent; }
+
+.hook-button-danger-active() { border-color: transparent; }
+
+
+// Disabled state
+// ========================================================================
+
+.hook-button-disable() { border-color: transparent; }
+
+
+// Modifier: `uk-button-link`
+// ========================================================================
+
+.hook-button-link() {
+    padding: 0 !important;
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+}
+
+
+// Size modifiers
+// ========================================================================
+
+.hook-button-large() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-button-misc() {
+
+    .uk-button-link:focus { outline: none; }
+
+    /* Sub-object `uk-button-group`
+     ========================================================================== */
+
+    /*
+     * Collapse border
+     */
+
+    .uk-button-group > .uk-button:nth-child(n+2),
+    .uk-button-group > div:nth-child(n+2) .uk-button { margin-left: -1px; }
+
+    /*
+     * Create position context to superimpose the successor elements border
+     * Known issue: If you use an `a` element as button and an icon inside,
+     * the active state will not work if you click the icon inside the button
+     * Workaround: Just use a `button` or `input` element as button
+     */
+
+    .uk-button-group .uk-button:hover,
+    .uk-button-group .uk-button:active,
+    .uk-button-group .uk-button.uk-active { position: relative; }
+
+}
