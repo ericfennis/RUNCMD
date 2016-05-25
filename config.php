@@ -27,7 +27,7 @@
         'storage' => 'auto',
       ),
     ),
-    'nocache' => false,
+    'nocache' => true,
   ),
   'system/finder' => 
   array (
