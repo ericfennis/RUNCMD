@@ -2,7 +2,7 @@
   "name": "vue-intl",
   "main": "dist/vue-intl.js",
   "description": "Internationalization plugin for Vue.js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "ignore": [
     ".*",

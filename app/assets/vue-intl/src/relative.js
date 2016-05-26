@@ -69,12 +69,17 @@ module.exports = function (_) {
         options["type"] || (options["type"] = default_type);
         options["number"] = calculate_time(Math.abs(seconds), options["unit"]);
         number = calculate_time(Math.abs(seconds), options["unit"]);
-        options["rule"] = _.pluralCat('de', number);
+        options["rule"] = _.pluralCat(this.$locale.id, number);
         return patterns[options["direction"]][options["unit"]][options["type"]][options["rule"]].replace(/\{[0-9]\}/, number.toString());
     }
 
     return function (date, options) {
         date = date instanceof Date ? date : new Date(date);
+
+        if(options && options.max && Math.abs((date - new Date()) / 1000) > options["max"]) {
+            return require('./date')(_)(date);
+        }
+
         return format((date - new Date()) / 1000, options, this.$locale.TIMESPAN_FORMATS);
     }
 

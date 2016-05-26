@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "79537fb5b1e72ba0974d84a887802614",
-    "content-hash": "f8fc6fe4f815f7c6125deb50410a694a",
+    "hash": "ce174292f5ccb1bfee5e45b8fc4d4f09",
+    "content-hash": "452d6617ed95cfe92232324c5d2316e5",
     "packages": [
         {
             "name": "bixie/formmaker",
@@ -215,12 +215,12 @@
         },
         {
             "name": "pagekit/blog",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://pagekit.com/package/pagekit/blog/1.0.0.zip",
+                "url": "https://pagekit.com/package/pagekit/blog/1.0.1.zip",
                 "reference": null,
-                "shasum": "68b11036b967ef5fa07e910dfb5d987f4f0cad6d"
+                "shasum": "71ff7e51bfcfa17837d3fe6682012d0054392f40"
             },
             "archive": {
                 "exclude": [
