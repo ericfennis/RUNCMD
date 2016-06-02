@@ -22,7 +22,7 @@ return [
 
 		'portfolio' => [
 			'name' => '@portfolio',
-			'label' => 'Portfolio',
+			'label' => 'Vacaturebank',
 			'controller' => 'Bixie\\Portfolio\\Controller\\SiteController',
 			'protected' => true,
 			'frontpage' => true
@@ -32,7 +32,7 @@ return [
 
 	'routes' => [
 
-		'/portfolio' => [
+		'/vacatures' => [
 			'name' => '@portfolio',
 			'controller' => [
 				'Bixie\\Portfolio\\Controller\\PortfolioController'
@@ -57,7 +57,7 @@ return [
 	'menu' => [
 
 		'portfolio' => [
-			'label' => 'Portfolio',
+			'label' => 'Vacaturebank',
 			'icon' => 'bixie/portfolio:icon.svg',
 			'url' => '@portfolio/project',
 			'access' => 'portfolio: manage portfolio',
@@ -65,14 +65,14 @@ return [
 		],
 
 		'portfolio: project' => [
-			'label' => 'Projects',
+			'label' => 'Vacatures',
 			'parent' => 'portfolio',
 			'url' => '@portfolio/project',
 			'access' => 'portfolio: manage portfolio',
 			'active' => '@portfolio/project*'
 		],
 
-		'portfolio: settings' => [
+    	'portfolio: settings' => [
 			'label' => 'Settings',
 			'parent' => 'portfolio',
 			'url' => '@portfolio/settings',

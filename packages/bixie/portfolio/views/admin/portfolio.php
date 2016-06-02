@@ -32,7 +32,7 @@
 		<div class="uk-position-relative" data-uk-margin>
 
 			<div data-uk-dropdown="{ mode: 'click' }">
-				<a class="uk-button uk-button-primary" :href="$url.route('admin/portfolio/project/edit')">
+				<a class="uk-button uk-button-primary" :href="$url.route('admin/vacatures/project/edit')">
 					{{ 'Add project' | trans }}</a>
 
 			</div>
