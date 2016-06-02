@@ -4,17 +4,17 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ce174292f5ccb1bfee5e45b8fc4d4f09",
-    "content-hash": "452d6617ed95cfe92232324c5d2316e5",
+    "hash": "0b13b3d8cb57ceb216562d6afe86f05d",
+    "content-hash": "39a25813d1331180af0a1e7060087f51",
     "packages": [
         {
             "name": "bixie/formmaker",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "dist": {
                 "type": "zip",
-                "url": "https://pagekit.com/package/bixie/formmaker/1.4.1.zip",
+                "url": "https://pagekit.com/package/bixie/formmaker/1.4.2.zip",
                 "reference": null,
-                "shasum": "2603271e2c55f8776a460bf10995a682c2bec45f"
+                "shasum": "78a9d0a59ef49b8e4879c72d1bee3cfc943f0d6a"
             },
             "require": {
                 "bixie/framework": "^0.1",
@@ -246,13 +246,13 @@
             "description": "A blog extensions with a built-in comment system."
         },
         {
-            "name": "pagekit/theme-brick",
+            "name": "pagekit/theme-one",
             "version": "1.0.0",
             "dist": {
                 "type": "zip",
-                "url": "E:\\xampp\\htdocs\\RUNCMD-Website\\RUNCMD/tmp/packages\\pagekit-theme-brick-1.0.0.zip",
+                "url": "https://pagekit.com/package/pagekit/theme-one/1.0.0.zip",
                 "reference": null,
-                "shasum": "9bd34f17120df8ea39559692c79dbf8c459fa970"
+                "shasum": "6d49b3cbb1de15b4a3947890e7935b13de76f7f8"
             },
             "archive": {
                 "exclude": [
@@ -279,72 +279,7 @@
                     "homepage": "http://pagekit.com"
                 }
             ],
-            "description": "A great theme to get your business started."
-        },
-        {
-            "name": "pagekit/tinymce",
-            "version": "1.0.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://pagekit.com/package/pagekit/tinymce/1.0.2.zip",
-                "reference": null,
-                "shasum": "8ca836ba4ac29ab4cd89870da351b8bd6a92601b"
-            },
-            "archive": {
-                "exclude": [
-                    "node_modules",
-                    "!/app",
-                    "*.less",
-                    "/app/assets/tinymce/skins",
-                    "/app/assets/tinymce/tinymce.js",
-                    "/app/assets/tinymce/tinymce.min.js",
-                    "/app/assets/tinymce/tinymce.jquery.js",
-                    "/app/assets/tinymce/jquery.tinymce.min",
-                    "/app/assets/tinymce/plugins/**/*.js",
-                    "!/app/assets/tinymce/plugins/**/*.min.js"
-                ]
-            },
-            "type": "pagekit-extension",
-            "extra": {
-                "icon": "icon.svg",
-                "scripts": "scripts.php"
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Pagekit",
-                    "email": "info@pagekit.com",
-                    "homepage": "http://pagekit.com"
-                }
-            ],
-            "description": "Replace Pagekit's default editor with TinyMCE."
-        },
-        {
-            "name": "sondreg/theme-simplicity",
-            "version": "1.0.0",
-            "dist": {
-                "type": "zip",
-                "url": "E:\\xampp\\htdocs\\RUNCMD-Website\\RUNCMD/tmp/packages\\sondreg-theme-simplicity-1.0.0.zip",
-                "reference": null,
-                "shasum": "f3d736f7ccc470649eaee07dbdc20c6e757f6590"
-            },
-            "type": "pagekit-theme",
-            "extra": {
-                "image": "image.png"
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sondre G",
-                    "email": "sondre@sondre.me",
-                    "homepage": "http://sondre.me"
-                }
-            ],
-            "description": "Simplicity."
+            "description": "Pagekit's default theme."
         }
     ],
     "packages-dev": [],

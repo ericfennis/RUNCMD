@@ -1,40 +1,13 @@
 [
     {
-        "name": "sondreg/theme-simplicity",
+        "name": "pagekit/theme-one",
         "version": "1.0.0",
         "version_normalized": "1.0.0.0",
         "dist": {
             "type": "zip",
-            "url": "E:\\xampp\\htdocs\\RUNCMD-Website\\RUNCMD/tmp/packages\\sondreg-theme-simplicity-1.0.0.zip",
+            "url": "https://pagekit.com/package/pagekit/theme-one/1.0.0.zip",
             "reference": null,
-            "shasum": "f3d736f7ccc470649eaee07dbdc20c6e757f6590"
-        },
-        "type": "pagekit-theme",
-        "extra": {
-            "image": "image.png"
-        },
-        "installation-source": "dist",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Sondre G",
-                "email": "sondre@sondre.me",
-                "homepage": "http://sondre.me"
-            }
-        ],
-        "description": "Simplicity."
-    },
-    {
-        "name": "pagekit/theme-brick",
-        "version": "1.0.0",
-        "version_normalized": "1.0.0.0",
-        "dist": {
-            "type": "zip",
-            "url": "E:\\xampp\\htdocs\\RUNCMD-Website\\RUNCMD/tmp/packages\\pagekit-theme-brick-1.0.0.zip",
-            "reference": null,
-            "shasum": "9bd34f17120df8ea39559692c79dbf8c459fa970"
+            "shasum": "6d49b3cbb1de15b4a3947890e7935b13de76f7f8"
         },
         "archive": {
             "exclude": [
@@ -62,105 +35,23 @@
                 "homepage": "http://pagekit.com"
             }
         ],
-        "description": "A great theme to get your business started."
+        "description": "Pagekit's default theme."
     },
     {
-        "name": "google/recaptcha",
-        "version": "1.1.2",
-        "version_normalized": "1.1.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/google/recaptcha.git",
-            "reference": "2b7e00566afca82a38a1d3adb8e42c118006296e"
-        },
+        "name": "pagekit/blog",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/google/recaptcha/zipball/2b7e00566afca82a38a1d3adb8e42c118006296e",
-            "reference": "2b7e00566afca82a38a1d3adb8e42c118006296e",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.2"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "4.5.*"
-        },
-        "time": "2015-09-02 17:23:59",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.1.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "ReCaptcha\\": "src/ReCaptcha"
-            }
-        },
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "description": "Client library for reCAPTCHA, a free service that protect websites from spam and abuse.",
-        "homepage": "http://www.google.com/recaptcha/",
-        "keywords": [
-            "Abuse",
-            "captcha",
-            "recaptcha",
-            "spam"
-        ]
-    },
-    {
-        "name": "bixie/framework",
-        "version": "0.1.5",
-        "version_normalized": "0.1.5.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Bixie/pagekit-framework.git",
-            "reference": "e36573e7e7f26f0bb4843cd90d3bb98c73f4722d"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Bixie/pagekit-framework/zipball/e36573e7e7f26f0bb4843cd90d3bb98c73f4722d",
-            "reference": "e36573e7e7f26f0bb4843cd90d3bb98c73f4722d",
-            "shasum": ""
-        },
-        "time": "2016-04-18 15:11:13",
-        "type": "pagekit-extension",
-        "extra": {
-            "icon": "icon.svg"
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Bixie\\Framework\\": "src"
-            }
-        },
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Bixie",
-                "email": "info@bixie.org",
-                "homepage": "http://www.bixie.org"
-            }
-        ],
-        "description": "Framework for Bixie extensions."
-    },
-    {
-        "name": "bixie/formmaker",
-        "version": "1.4.1",
-        "version_normalized": "1.4.1.0",
-        "dist": {
-            "type": "zip",
-            "url": "https://pagekit.com/package/bixie/formmaker/1.4.1.zip",
+            "url": "https://pagekit.com/package/pagekit/blog/1.0.1.zip",
             "reference": null,
-            "shasum": "2603271e2c55f8776a460bf10995a682c2bec45f"
+            "shasum": "71ff7e51bfcfa17837d3fe6682012d0054392f40"
         },
-        "require": {
-            "bixie/framework": "^0.1",
-            "google/recaptcha": "~1.1"
+        "archive": {
+            "exclude": [
+                "node_modules",
+                "!/app"
+            ]
         },
         "type": "pagekit-extension",
         "extra": {
@@ -173,12 +64,12 @@
         ],
         "authors": [
             {
-                "name": "Bixie",
-                "email": "info@bixie.org",
-                "homepage": "http://formmaker.bixie.org"
+                "name": "Pagekit",
+                "email": "info@pagekit.com",
+                "homepage": "http://pagekit.com"
             }
         ],
-        "description": "Create forms in your Pagekit site. Build forms and manage the submissions."
+        "description": "A blog extensions with a built-in comment system."
     },
     {
         "name": "lusitanian/oauth",
@@ -281,62 +172,102 @@
         "description": "An analytics extension for your dashboard."
     },
     {
-        "name": "pagekit/tinymce",
-        "version": "1.0.2",
-        "version_normalized": "1.0.2.0",
+        "name": "google/recaptcha",
+        "version": "1.1.2",
+        "version_normalized": "1.1.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/google/recaptcha.git",
+            "reference": "2b7e00566afca82a38a1d3adb8e42c118006296e"
+        },
         "dist": {
             "type": "zip",
-            "url": "https://pagekit.com/package/pagekit/tinymce/1.0.2.zip",
-            "reference": null,
-            "shasum": "8ca836ba4ac29ab4cd89870da351b8bd6a92601b"
+            "url": "https://api.github.com/repos/google/recaptcha/zipball/2b7e00566afca82a38a1d3adb8e42c118006296e",
+            "reference": "2b7e00566afca82a38a1d3adb8e42c118006296e",
+            "shasum": ""
         },
-        "archive": {
-            "exclude": [
-                "node_modules",
-                "!/app",
-                "*.less",
-                "/app/assets/tinymce/skins",
-                "/app/assets/tinymce/tinymce.js",
-                "/app/assets/tinymce/tinymce.min.js",
-                "/app/assets/tinymce/tinymce.jquery.js",
-                "/app/assets/tinymce/jquery.tinymce.min",
-                "/app/assets/tinymce/plugins/**/*.js",
-                "!/app/assets/tinymce/plugins/**/*.min.js"
-            ]
+        "require": {
+            "php": ">=5.3.2"
         },
-        "type": "pagekit-extension",
+        "require-dev": {
+            "phpunit/phpunit": "4.5.*"
+        },
+        "time": "2015-09-02 17:23:59",
+        "type": "library",
         "extra": {
-            "icon": "icon.svg",
-            "scripts": "scripts.php"
+            "branch-alias": {
+                "dev-master": "1.1.x-dev"
+            }
         },
         "installation-source": "dist",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Pagekit",
-                "email": "info@pagekit.com",
-                "homepage": "http://pagekit.com"
+        "autoload": {
+            "psr-4": {
+                "ReCaptcha\\": "src/ReCaptcha"
             }
+        },
+        "license": [
+            "BSD-3-Clause"
         ],
-        "description": "Replace Pagekit's default editor with TinyMCE."
+        "description": "Client library for reCAPTCHA, a free service that protect websites from spam and abuse.",
+        "homepage": "http://www.google.com/recaptcha/",
+        "keywords": [
+            "Abuse",
+            "captcha",
+            "recaptcha",
+            "spam"
+        ]
     },
     {
-        "name": "pagekit/blog",
-        "version": "1.0.1",
-        "version_normalized": "1.0.1.0",
+        "name": "bixie/framework",
+        "version": "0.1.5",
+        "version_normalized": "0.1.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Bixie/pagekit-framework.git",
+            "reference": "e36573e7e7f26f0bb4843cd90d3bb98c73f4722d"
+        },
         "dist": {
             "type": "zip",
-            "url": "https://pagekit.com/package/pagekit/blog/1.0.1.zip",
-            "reference": null,
-            "shasum": "71ff7e51bfcfa17837d3fe6682012d0054392f40"
+            "url": "https://api.github.com/repos/Bixie/pagekit-framework/zipball/e36573e7e7f26f0bb4843cd90d3bb98c73f4722d",
+            "reference": "e36573e7e7f26f0bb4843cd90d3bb98c73f4722d",
+            "shasum": ""
         },
-        "archive": {
-            "exclude": [
-                "node_modules",
-                "!/app"
-            ]
+        "time": "2016-04-18 15:11:13",
+        "type": "pagekit-extension",
+        "extra": {
+            "icon": "icon.svg"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Bixie\\Framework\\": "src"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Bixie",
+                "email": "info@bixie.org",
+                "homepage": "http://www.bixie.org"
+            }
+        ],
+        "description": "Framework for Bixie extensions."
+    },
+    {
+        "name": "bixie/formmaker",
+        "version": "1.4.2",
+        "version_normalized": "1.4.2.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://pagekit.com/package/bixie/formmaker/1.4.2.zip",
+            "reference": null,
+            "shasum": "78a9d0a59ef49b8e4879c72d1bee3cfc943f0d6a"
+        },
+        "require": {
+            "bixie/framework": "^0.1",
+            "google/recaptcha": "~1.1"
         },
         "type": "pagekit-extension",
         "extra": {
@@ -349,11 +280,11 @@
         ],
         "authors": [
             {
-                "name": "Pagekit",
-                "email": "info@pagekit.com",
-                "homepage": "http://pagekit.com"
+                "name": "Bixie",
+                "email": "info@bixie.org",
+                "homepage": "http://formmaker.bixie.org"
             }
         ],
-        "description": "A blog extensions with a built-in comment system."
+        "description": "Create forms in your Pagekit site. Build forms and manage the submissions."
     }
 ]
