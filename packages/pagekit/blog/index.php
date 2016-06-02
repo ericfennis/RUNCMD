@@ -18,7 +18,7 @@ return [
 
         'blog' => [
             'name' => '@blog',
-            'label' => 'Blog',
+            'label' => 'Vacaturebank',
             'controller' => 'Pagekit\\Blog\\Controller\\SiteController',
             'protected' => true,
             'frontpage' => true
@@ -78,7 +78,7 @@ return [
     'menu' => [
 
         'blog' => [
-            'label' => 'Blog',
+            'label' => 'Vacaturebank',
             'icon' => 'blog:icon.svg',
             'url' => '@blog/post',
             'active' => '@blog/post*',
@@ -92,20 +92,6 @@ return [
             'active' => '@blog/post*',
             'access' => 'blog: manage own posts || blog: manage all posts'
         ],
-        'blog: comments' => [
-            'label' => 'Comments',
-            'parent' => 'blog',
-            'url' => '@blog/comment',
-            'active' => '@blog/comment*',
-            'access' => 'blog: manage comments'
-        ],
-        'blog: settings' => [
-            'label' => 'Settings',
-            'parent' => 'blog',
-            'url' => '@blog/settings',
-            'active' => '@blog/settings*',
-            'access' => 'system: manage settings'
-        ]
 
     ],
 
