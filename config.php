@@ -12,7 +12,7 @@
       array (
         'host' => 'localhost',
         'user' => 'root',
-        'password' => '123123',
+        'password' => '',
         'dbname' => 'runcmd',
         'prefix' => 'pk_',
       ),
