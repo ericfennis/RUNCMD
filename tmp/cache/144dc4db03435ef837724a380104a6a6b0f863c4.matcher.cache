@@ -5,12 +5,12 @@ use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\RequestContext;
 
 /**
- * UrlMatcher8fa4e2948010db2eb9a7f4b08df5744bb48ecb52.
+ * UrlMatcher144dc4db03435ef837724a380104a6a6b0f863c4.
  *
  * This class has been auto-generated
  * by the Symfony Routing Component.
  */
-class UrlMatcher8fa4e2948010db2eb9a7f4b08df5744bb48ecb52 extends Symfony\Component\Routing\Matcher\UrlMatcher
+class UrlMatcher144dc4db03435ef837724a380104a6a6b0f863c4 extends Symfony\Component\Routing\Matcher\UrlMatcher
 {
     /**
      * Constructor.
@@ -1609,6 +1609,16 @@ class UrlMatcher8fa4e2948010db2eb9a7f4b08df5744bb48ecb52 extends Symfony\Compone
 
         }
 
+        // @page/5
+        if ($pathinfo === '/contact') {
+            return array (  'id' => 5,  '_node' => 11,  '_controller' => 'Pagekit\\Site\\Controller\\PageController::indexAction',  '_route' => '@page/5',);
+        }
+
+        // @page/4
+        if ($pathinfo === '/') {
+            return array (  'id' => 4,  '_node' => 9,  '_controller' => 'Pagekit\\Site\\Controller\\PageController::indexAction',  '_variables' =>   array (  ),  '_route' => '@page/4',);
+        }
+
         if (0 === strpos($pathinfo, '/nieuws-2')) {
             // @blog
             if ($pathinfo === '/nieuws-2') {
@@ -1651,11 +1661,6 @@ class UrlMatcher8fa4e2948010db2eb9a7f4b08df5744bb48ecb52 extends Symfony\Compone
                 return $this->mergeDefaults(array_replace($matches, array('_route' => '@vacatures/id')), array (  '_controller' => 'Bixie\\Portfolio\\Controller\\SiteController::projectAction',  '_node' => 3,));
             }
 
-        }
-
-        // @page/1
-        if ($pathinfo === '/') {
-            return array (  'id' => 1,  '_node' => 1,  '_controller' => 'Pagekit\\Site\\Controller\\PageController::indexAction',  '_variables' =>   array (  ),  '_route' => '@page/1',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
