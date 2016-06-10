@@ -22,23 +22,4 @@
   array (
     'secret' => 'Ss5yJH.abgKFC6dVJoEiNCiYxnsr7Y/i2UBPpnV350OeEdSSI0iJKdL3nG.KuRBO',
   ),
-  'system/cache' => 
-  array (
-    'caches' => 
-    array (
-      'cache' => 
-      array (
-        'storage' => 'auto',
-      ),
-    ),
-    'nocache' => true,
-  ),
-  'system/finder' => 
-  array (
-    'storage' => '',
-  ),
-  'debug' => 
-  array (
-    'enabled' => false,
-  ),
 );
