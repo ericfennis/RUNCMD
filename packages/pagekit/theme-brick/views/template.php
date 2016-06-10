@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?= $view->render('head') ?>
-        <?php $view->style('custom', 'theme:css/custom.css') ?>
         <?php $view->style('theme', 'theme:css/theme.css') ?>
+        <?php $view->style('custom', 'theme:css/custom.css') ?>
         <?php $view->script('theme', 'theme:js/theme.js', ['uikit-sticky',  'uikit-lightbox',  'uikit-parallax']) ?>
     </head>
     <body>
@@ -30,8 +30,31 @@
 
                         <?php if ($view->menu()->exists('main') || $view->position()->exists('navbar')) : ?>
                         <div class="uk-navbar-flip uk-visible-large">
+                                                                                       <div id="social-media">
+                        <ul class="sm-content">
+                            <li>
+                                <a href="https://www.facebook.com/svruncmd/">
+                                    <img src="packages/pagekit/theme-brick/img/facebook.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/svruncmd/">
+                                    <img src="packages/pagekit/theme-brick/img/instalogo.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a id="linked-in" href="https://www.linkedin.com/company/sv-run-cmd">
+                                    <img src="packages/pagekit/theme-brick/img/linkedin.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="lid-worden">
+                        <a href="/lidworden" class="button box-shadow" id="lid-font">Lid worden!</a>
+                    </div>
                             <?= $view->menu('main', 'menu-navbar.php') ?>
                             <?= $view->position('navbar', 'position-blank.php') ?>
+
                         </div>
                         <?php endif ?>
 
