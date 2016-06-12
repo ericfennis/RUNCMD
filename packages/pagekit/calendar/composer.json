@@ -1,0 +1,25 @@
+{
+    "name": "pagekit/calendar",
+    "type": "pagekit-extension",
+    "version": "1.0.0",
+    "title": "Calendar",
+    "description": "Calendar module for RUN CMD events",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eric Fennis",
+            "email": "mail@ericf.nl",
+            "homepage": "http://ericf.nl"
+        }
+    ],
+    "extra": {
+        "icon": "icon.svg",
+        "scripts": "scripts.php"
+    },
+    "archive": {
+        "exclude": [
+            "node_modules", 
+            "!/app"
+        ]
+    }
+}

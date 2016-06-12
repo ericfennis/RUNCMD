@@ -1,7 +1,7 @@
 <?php return array (
   'application' => 
   array (
-    'debug' => false,
+    'debug' => true,
   ),
   'database' => 
   array (
@@ -12,7 +12,7 @@
       array (
         'host' => 'localhost',
         'user' => 'root',
-        'password' => '123123',
+        'password' => '',
         'dbname' => 'runcmd',
         'prefix' => 'pk_',
       ),
