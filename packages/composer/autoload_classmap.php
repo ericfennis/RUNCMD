@@ -118,4 +118,5 @@ return array(
     'ReCaptcha\\RequestMethod\\SocketPost' => $vendorDir . '/google/recaptcha/src/ReCaptcha/RequestMethod/SocketPost.php',
     'ReCaptcha\\RequestParameters' => $vendorDir . '/google/recaptcha/src/ReCaptcha/RequestParameters.php',
     'ReCaptcha\\Response' => $vendorDir . '/google/recaptcha/src/ReCaptcha/Response.php',
+    'abeautifulsite\\SimpleImage' => $vendorDir . '/abeautifulsite/simpleimage/src/abeautifulsite/SimpleImage.php',
 );
