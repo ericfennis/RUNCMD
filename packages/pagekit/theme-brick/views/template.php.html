@@ -8,14 +8,13 @@
         <?php $view->style('custom', 'theme:css/custom.css') ?>
         <?php $view->style('theme', 'theme:css/theme.css') ?>
         <?php $view->script('theme', 'theme:js/theme.js', ['uikit-sticky',  'uikit-lightbox',  'uikit-parallax']) ?>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600italic,700,700italic' rel='stylesheet' type='text/css'>
     </head>
     <body>
 
-        <div class="uk-container uk-container-center">
-            <div class="tm-container">
 
                 <?php if ($params['logo'] || $view->menu()->exists('main') || $view->position()->exists('navbar')) : ?>
-                <div class="<?= $params['classes.navbar'] ?>" <?= $params['classes.sticky'] ?>>
+                <header class="<?= $params['classes.navbar'] ?>" <?= $params['classes.sticky'] ?>>
 
                     <nav class="uk-navbar">
 
@@ -40,10 +39,7 @@
                             <a href="#offcanvas" class="uk-navbar-toggle" data-uk-offcanvas></a>
                         </div>
                         <?php endif ?>
-
                     </nav>
-<<<<<<< HEAD
-=======
                     <nav id="social-media">
                         <ul class="sm-content">
                             <li>
@@ -67,9 +63,7 @@
                         <a href="/lidworden" class="button box-shadow" id="lid-font">Lid worden!</a>
                     </div>
                 </header>
->>>>>>> origin/carlo
 
-                </div>
                 <?php endif ?>
 
                 <?php if ($view->position()->exists('hero')) : ?>
@@ -101,11 +95,8 @@
                             <?= $view->render('content') ?>
                         </main>
 
-                        <?php if ($view->position()->exists('sidebar')) : ?>
-                        <aside class="uk-width-medium-1-4 <?= $params['sidebar_first'] ? 'uk-flex-order-first-medium' : ''; ?>">
-                            <?= $view->position('sidebar', 'position-panel.php') ?>
-                        </aside>
-                        <?php endif ?>
+    
+                    
 
                     </div>
 
@@ -145,7 +136,7 @@
                         <a href="/lid-worden" class="button box-shadow">Lid worden!</a>
                     </section>
                     <section>
-                        <div class="onderwerp-style" id="sponsoren">Sponsoren</div>
+                        <div class="onderwerp-style">Sponsoren</div>
                         <a href="/sterc"><img src="packages/pagekit/theme-brick/img/sterc.svg"></a>
                         <a href="/nhl"><img src="packages/pagekit/theme-brick/img/nhl.svg"></a>
                     </section>
@@ -153,8 +144,7 @@
                 </div>
                 <?php endif; ?>
 
-            </div>
-        </div>
+        
 
         <?php if ($view->position()->exists('offcanvas') || $view->menu()->exists('offcanvas')) : ?>
         <div id="offcanvas" class="uk-offcanvas">

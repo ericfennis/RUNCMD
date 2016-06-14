@@ -5,7 +5,6 @@
 
 ul.uk-navbar-nav a {
      color: #000000 ! important;
-      margin-top: -50px;
 }
 
 ul.uk-navbar-nav li.uk-active a {
@@ -13,28 +12,24 @@ ul.uk-navbar-nav li.uk-active a {
 }
 
 .tm-logo.uk-responsive-height {
-    height: 115px ! important;
+    height: 216px ! important;
     margin-top: -60px;
-    margin-left: 70px;
-    width: 110px ! important;
+    width: 231px ! important;
+    margin-left: -40px;
+    margin-right: 500px;
 }
-
-.uk-button {
-    background: #2896c8!important;
-}
-
 
 ul {
     list-style: none;
 }
 /*Social media*/
 .sm-content {
-    float: right;
+    float:left; 
 }
 
 .sm-content li{
     display: inline-block;
-    margin-right: 20px;
+    margin-right:`20px;
     margin-top: 35px;
 }
 
@@ -61,10 +56,9 @@ ul {
 
 #lid-worden {
 margin-top: 45px;
-margin-left: 300px;
+margin-left: 70px;
 display: inline-block;
 font-size: 20px;
-    float: right;
 }
 
 #lid-worden a:hover {
@@ -72,15 +66,23 @@ font-size: 20px;
 	text-decoration: underline;
 }
 
-  div#tm-hero.tm-hero.uk-block.uk-block-large.uk-cover-background {padding-top: 120px; padding-bottom: 0;}
-.tm-container {margin-bottom: 0px!important;}
-.tm-footer {background: #444444!important;}
-.tm-footer #formmakerfield_2 {background: #fff;}
-.tm-footer .uk-button {color: #fff!important;}
-.tm-footer .uk-button:hover {color: #000!important;}
-.tm-footer .uk-panel-title {color: #a0cd46;}
+/*Footer*/
 
+.onderwerp-style {
+	font-size: 25px;
+	color: #a0cd46;
+	font-weight: 700;
+	font-style: italic;
+}
 
+li {
+	color: white;
+	font-style: italic;
+	margin-bottom: 10px;
+}
 
-
-article#portfolio-project div.uk-grid .uk-badge.uk-margin-small-right {display: none;}
+ul a:hover {
+	font-weight: 600;
+	text-decoration: underline;
+	text-decoration-style: white;
+}
