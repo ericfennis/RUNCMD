@@ -6,9 +6,6 @@
     <li class="<?= $node->hasChildren() ? 'uk-parent' : '' ?><?= $node->get('active') ? ' uk-active' : '' ?>" <?= ($root->getDepth() === 0 && $node->hasChildren()) ? 'data-uk-dropdown':'' ?>>
         <a href="<?= $node->getUrl() ?>"><?= $node->title ?></a>
 
-        
-
-
         <?php if ($node->hasChildren()) : ?>
 
             <?php if ($root->getDepth() === 0) : ?>
@@ -33,12 +30,6 @@
 
     </li>
     <?php endforeach ?>
-    <li class="">
-        <a href="/runcmd/portfolio">Contact</a>
-
-        
-    </li><li class="">
-        <a href="/runcmd/portfolio">Wie zijn wij</a></li>
 
 <?php if ($root->getDepth() === 0) : ?>
 </ul>

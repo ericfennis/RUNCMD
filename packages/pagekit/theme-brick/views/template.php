@@ -8,13 +8,14 @@
         <?php $view->style('custom', 'theme:css/custom.css') ?>
         <?php $view->style('theme', 'theme:css/theme.css') ?>
         <?php $view->script('theme', 'theme:js/theme.js', ['uikit-sticky',  'uikit-lightbox',  'uikit-parallax']) ?>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600italic,700,700italic' rel='stylesheet' type='text/css'>
     </head>
     <body>
 
+        <div class="uk-container uk-container-center">
+            <div class="tm-container">
 
                 <?php if ($params['logo'] || $view->menu()->exists('main') || $view->position()->exists('navbar')) : ?>
-                <header class="<?= $params['classes.navbar'] ?>" <?= $params['classes.sticky'] ?>>
+                <div class="<?= $params['classes.navbar'] ?>" <?= $params['classes.sticky'] ?>>
 
                     <nav class="uk-navbar">
 
@@ -39,31 +40,10 @@
                             <a href="#offcanvas" class="uk-navbar-toggle" data-uk-offcanvas></a>
                         </div>
                         <?php endif ?>
-                    </nav>
-                    <nav id="social-media">
-                        <ul class="sm-content">
-                            <li>
-                                <a href="https://www.facebook.com/svruncmd/">
-                                    <img src="packages/pagekit/theme-brick/img/facebook.png">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/svruncmd/">
-                                    <img src="packages/pagekit/theme-brick/img/instalogo.png">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/company/sv-run-cmd">
-                                    <img src="packages/pagekit/theme-brick/img/linkedin.png">
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div id="lid-worden">  
-                        <a href="/lidworden" class="button box-shadow">Lid worden!</a>
-                    </div>
-                </header>
 
+                    </nav>
+
+                </div>
                 <?php endif ?>
 
                 <?php if ($view->position()->exists('hero')) : ?>
@@ -95,8 +75,11 @@
                             <?= $view->render('content') ?>
                         </main>
 
-    
-                    
+                        <?php if ($view->position()->exists('sidebar')) : ?>
+                        <aside class="uk-width-medium-1-4 <?= $params['sidebar_first'] ? 'uk-flex-order-first-medium' : ''; ?>">
+                            <?= $view->position('sidebar', 'position-panel.php') ?>
+                        </aside>
+                        <?php endif ?>
 
                     </div>
 
@@ -122,7 +105,8 @@
                 </div>
                 <?php endif; ?>
 
-        
+            </div>
+        </div>
 
         <?php if ($view->position()->exists('offcanvas') || $view->menu()->exists('offcanvas')) : ?>
         <div id="offcanvas" class="uk-offcanvas">
