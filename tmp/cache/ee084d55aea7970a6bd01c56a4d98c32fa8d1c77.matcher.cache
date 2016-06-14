@@ -5,12 +5,12 @@ use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\RequestContext;
 
 /**
- * UrlMatcher2fdd8bb33c306a946f6d1ccda01d77a0249406b9.
+ * UrlMatcheree084d55aea7970a6bd01c56a4d98c32fa8d1c77.
  *
  * This class has been auto-generated
  * by the Symfony Routing Component.
  */
-class UrlMatcher2fdd8bb33c306a946f6d1ccda01d77a0249406b9 extends Symfony\Component\Routing\Matcher\UrlMatcher
+class UrlMatcheree084d55aea7970a6bd01c56a4d98c32fa8d1c77 extends Symfony\Component\Routing\Matcher\UrlMatcher
 {
     /**
      * Constructor.
@@ -876,6 +876,100 @@ class UrlMatcher2fdd8bb33c306a946f6d1ccda01d77a0249406b9 extends Symfony\Compone
 
                 }
 
+                if (0 === strpos($pathinfo, '/admin/analytics')) {
+                    // @analytics/analytics/authredirect
+                    if ($pathinfo === '/admin/analytics/auth') {
+                        if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                            $allow = array_merge($allow, array('GET', 'HEAD'));
+                            goto not_analyticsanalyticsauthredirect;
+                        }
+
+                        return array (  '_controller' => 'Pagekit\\Analytics\\Controller\\AnalyticsController::authRedirectAction',  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@analytics/analytics/authredirect',);
+                    }
+                    not_analyticsanalyticsauthredirect:
+
+                    // @analytics/analytics/authcode
+                    if ($pathinfo === '/admin/analytics/code') {
+                        if ($this->context->getMethod() != 'POST') {
+                            $allow[] = 'POST';
+                            goto not_analyticsanalyticsauthcode;
+                        }
+
+                        return array (  '_controller' => 'Pagekit\\Analytics\\Controller\\AnalyticsController::authCodeAction',  '_request' =>   array (    'value' =>     array (      'code' => 'string',    ),  ),  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@analytics/analytics/authcode',);
+                    }
+                    not_analyticsanalyticsauthcode:
+
+                    // @analytics/analytics/user
+                    if ($pathinfo === '/admin/analytics/user') {
+                        if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                            $allow = array_merge($allow, array('GET', 'HEAD'));
+                            goto not_analyticsanalyticsuser;
+                        }
+
+                        return array (  '_controller' => 'Pagekit\\Analytics\\Controller\\AnalyticsController::userAction',  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@analytics/analytics/user',);
+                    }
+                    not_analyticsanalyticsuser:
+
+                    // @analytics/analytics/api
+                    if ($pathinfo === '/admin/analytics/api') {
+                        if ($this->context->getMethod() != 'POST') {
+                            $allow[] = 'POST';
+                            goto not_analyticsanalyticsapi;
+                        }
+
+                        return array (  '_controller' => 'Pagekit\\Analytics\\Controller\\AnalyticsController::apiAction',  '_request' =>   array (    'value' =>     array (      'metrics' => 'string',      'dimensions' => 'string',      'startDate' => 'string',      'filters' => 'string',      'invalidCache' => 'boolean',      'sort' => 'string',      'maxResults' => 'int',    ),  ),  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@analytics/analytics/api',);
+                    }
+                    not_analyticsanalyticsapi:
+
+                    // @analytics/analytics/realtime
+                    if ($pathinfo === '/admin/analytics/realtime') {
+                        if ($this->context->getMethod() != 'POST') {
+                            $allow[] = 'POST';
+                            goto not_analyticsanalyticsrealtime;
+                        }
+
+                        return array (  '_controller' => 'Pagekit\\Analytics\\Controller\\AnalyticsController::realtimeAction',  '_request' =>   array (    'value' =>     array (      'metrics' => 'string',      'dimensions' => 'string',      'invalidCache' => 'boolean',    ),  ),  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@analytics/analytics/realtime',);
+                    }
+                    not_analyticsanalyticsrealtime:
+
+                    if (0 === strpos($pathinfo, '/admin/analytics/profile')) {
+                        // @analytics/analytics/profile
+                        if ($pathinfo === '/admin/analytics/profile') {
+                            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                                $allow = array_merge($allow, array('GET', 'HEAD'));
+                                goto not_analyticsanalyticsprofile;
+                            }
+
+                            return array (  '_controller' => 'Pagekit\\Analytics\\Controller\\AnalyticsController::profileAction',  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@analytics/analytics/profile',);
+                        }
+                        not_analyticsanalyticsprofile:
+
+                        // @analytics/analytics/saveprofile
+                        if ($pathinfo === '/admin/analytics/profile') {
+                            if ($this->context->getMethod() != 'POST') {
+                                $allow[] = 'POST';
+                                goto not_analyticsanalyticssaveprofile;
+                            }
+
+                            return array (  '_controller' => 'Pagekit\\Analytics\\Controller\\AnalyticsController::saveProfileAction',  '_request' =>   array (    'value' =>     array (      'accountId' => 'int',      'propertyId' => 'int',      'profileId' => 'int',    ),  ),  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@analytics/analytics/saveprofile',);
+                        }
+                        not_analyticsanalyticssaveprofile:
+
+                    }
+
+                    // @analytics/analytics/disconnect
+                    if ($pathinfo === '/admin/analytics/disconnect') {
+                        if ($this->context->getMethod() != 'DELETE') {
+                            $allow[] = 'DELETE';
+                            goto not_analyticsanalyticsdisconnect;
+                        }
+
+                        return array (  '_controller' => 'Pagekit\\Analytics\\Controller\\AnalyticsController::disconnectAction',  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@analytics/analytics/disconnect',);
+                    }
+                    not_analyticsanalyticsdisconnect:
+
+                }
+
                 if (0 === strpos($pathinfo, '/admin/blog')) {
                     if (0 === strpos($pathinfo, '/admin/blog/post')) {
                         // @blog/post
@@ -1073,403 +1167,6 @@ class UrlMatcher2fdd8bb33c306a946f6d1ccda01d77a0249406b9 extends Symfony\Compone
 
             }
 
-            if (0 === strpos($pathinfo, '/admin')) {
-                if (0 === strpos($pathinfo, '/admin/analytics')) {
-                    // @analytics/analytics/authredirect
-                    if ($pathinfo === '/admin/analytics/auth') {
-                        if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                            $allow = array_merge($allow, array('GET', 'HEAD'));
-                            goto not_analyticsanalyticsauthredirect;
-                        }
-
-                        return array (  '_controller' => 'Pagekit\\Analytics\\Controller\\AnalyticsController::authRedirectAction',  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@analytics/analytics/authredirect',);
-                    }
-                    not_analyticsanalyticsauthredirect:
-
-                    // @analytics/analytics/authcode
-                    if ($pathinfo === '/admin/analytics/code') {
-                        if ($this->context->getMethod() != 'POST') {
-                            $allow[] = 'POST';
-                            goto not_analyticsanalyticsauthcode;
-                        }
-
-                        return array (  '_controller' => 'Pagekit\\Analytics\\Controller\\AnalyticsController::authCodeAction',  '_request' =>   array (    'value' =>     array (      'code' => 'string',    ),  ),  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@analytics/analytics/authcode',);
-                    }
-                    not_analyticsanalyticsauthcode:
-
-                    // @analytics/analytics/user
-                    if ($pathinfo === '/admin/analytics/user') {
-                        if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                            $allow = array_merge($allow, array('GET', 'HEAD'));
-                            goto not_analyticsanalyticsuser;
-                        }
-
-                        return array (  '_controller' => 'Pagekit\\Analytics\\Controller\\AnalyticsController::userAction',  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@analytics/analytics/user',);
-                    }
-                    not_analyticsanalyticsuser:
-
-                    // @analytics/analytics/api
-                    if ($pathinfo === '/admin/analytics/api') {
-                        if ($this->context->getMethod() != 'POST') {
-                            $allow[] = 'POST';
-                            goto not_analyticsanalyticsapi;
-                        }
-
-                        return array (  '_controller' => 'Pagekit\\Analytics\\Controller\\AnalyticsController::apiAction',  '_request' =>   array (    'value' =>     array (      'metrics' => 'string',      'dimensions' => 'string',      'startDate' => 'string',      'filters' => 'string',      'invalidCache' => 'boolean',      'sort' => 'string',      'maxResults' => 'int',    ),  ),  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@analytics/analytics/api',);
-                    }
-                    not_analyticsanalyticsapi:
-
-                    // @analytics/analytics/realtime
-                    if ($pathinfo === '/admin/analytics/realtime') {
-                        if ($this->context->getMethod() != 'POST') {
-                            $allow[] = 'POST';
-                            goto not_analyticsanalyticsrealtime;
-                        }
-
-                        return array (  '_controller' => 'Pagekit\\Analytics\\Controller\\AnalyticsController::realtimeAction',  '_request' =>   array (    'value' =>     array (      'metrics' => 'string',      'dimensions' => 'string',      'invalidCache' => 'boolean',    ),  ),  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@analytics/analytics/realtime',);
-                    }
-                    not_analyticsanalyticsrealtime:
-
-                    if (0 === strpos($pathinfo, '/admin/analytics/profile')) {
-                        // @analytics/analytics/profile
-                        if ($pathinfo === '/admin/analytics/profile') {
-                            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                                $allow = array_merge($allow, array('GET', 'HEAD'));
-                                goto not_analyticsanalyticsprofile;
-                            }
-
-                            return array (  '_controller' => 'Pagekit\\Analytics\\Controller\\AnalyticsController::profileAction',  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@analytics/analytics/profile',);
-                        }
-                        not_analyticsanalyticsprofile:
-
-                        // @analytics/analytics/saveprofile
-                        if ($pathinfo === '/admin/analytics/profile') {
-                            if ($this->context->getMethod() != 'POST') {
-                                $allow[] = 'POST';
-                                goto not_analyticsanalyticssaveprofile;
-                            }
-
-                            return array (  '_controller' => 'Pagekit\\Analytics\\Controller\\AnalyticsController::saveProfileAction',  '_request' =>   array (    'value' =>     array (      'accountId' => 'int',      'propertyId' => 'int',      'profileId' => 'int',    ),  ),  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@analytics/analytics/saveprofile',);
-                        }
-                        not_analyticsanalyticssaveprofile:
-
-                    }
-
-                    // @analytics/analytics/disconnect
-                    if ($pathinfo === '/admin/analytics/disconnect') {
-                        if ($this->context->getMethod() != 'DELETE') {
-                            $allow[] = 'DELETE';
-                            goto not_analyticsanalyticsdisconnect;
-                        }
-
-                        return array (  '_controller' => 'Pagekit\\Analytics\\Controller\\AnalyticsController::disconnectAction',  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@analytics/analytics/disconnect',);
-                    }
-                    not_analyticsanalyticsdisconnect:
-
-                }
-
-                if (0 === strpos($pathinfo, '/admin/formmaker')) {
-                    // @formmaker
-                    if ($pathinfo === '/admin/formmaker') {
-                        if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                            $allow = array_merge($allow, array('GET', 'HEAD'));
-                            goto not_formmaker;
-                        }
-
-                        return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\FormmakerController::indexAction',  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@formmaker',);
-                    }
-                    not_formmaker:
-
-                    if (0 === strpos($pathinfo, '/admin/formmaker/submissions')) {
-                        // @formmaker/submissions
-                        if ($pathinfo === '/admin/formmaker/submissions') {
-                            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                                $allow = array_merge($allow, array('GET', 'HEAD'));
-                                goto not_formmakersubmissions;
-                            }
-
-                            return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\FormmakerController::submissionsAction',  '_request' =>   array (    'value' =>     array (      'filter' => 'array',      'page' => 'int',    ),  ),  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@formmaker/submissions',);
-                        }
-                        not_formmakersubmissions:
-
-                        // @formmaker/csv
-                        if ($pathinfo === '/admin/formmaker/submissions/csv') {
-                            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                                $allow = array_merge($allow, array('GET', 'HEAD'));
-                                goto not_formmakercsv;
-                            }
-
-                            return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\FormmakerController::csvAction',  '_access' =>   array (    0 => 'system: access admin area',  ),  '_route' => '@formmaker/csv',);
-                        }
-                        not_formmakercsv:
-
-                    }
-
-                    // @formmaker/form/edit
-                    if ($pathinfo === '/admin/formmaker/form/edit') {
-                        return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\FormController::editAction',  '_request' =>   array (    'value' =>     array (      'id' => 'int',    ),  ),  '_access' =>   array (    0 => 'formmaker: manage forms',    1 => 'system: access admin area',  ),  '_route' => '@formmaker/form/edit',);
-                    }
-
-                }
-
-            }
-
-        }
-
-        // @formmaker/form/front
-        if (0 === strpos($pathinfo, '/formmaker') && preg_match('#^/formmaker/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => '@formmaker/form/front')), array (  '_controller' => 'Bixie\\Formmaker\\Controller\\SiteController::formAction',));
-        }
-
-        if (0 === strpos($pathinfo, '/a')) {
-            if (0 === strpos($pathinfo, '/api/formmaker')) {
-                if (0 === strpos($pathinfo, '/api/formmaker/f')) {
-                    if (0 === strpos($pathinfo, '/api/formmaker/field')) {
-                        // @formmaker/api/field
-                        if ($pathinfo === '/api/formmaker/field') {
-                            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                                $allow = array_merge($allow, array('GET', 'HEAD'));
-                                goto not_formmakerapifield;
-                            }
-
-                            return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\FieldApiController::indexAction',  '_request' =>   array (    'value' =>     array (      'form_id' => 'int',    ),    'csrf' => true,  ),  '_access' =>   array (    0 => 'formmaker: manage forms',  ),  '_route' => '@formmaker/api/field',);
-                        }
-                        not_formmakerapifield:
-
-                        // @formmaker/api/field/save
-                        if ($pathinfo === '/api/formmaker/field') {
-                            if ($this->context->getMethod() != 'POST') {
-                                $allow[] = 'POST';
-                                goto not_formmakerapifieldsave;
-                            }
-
-                            return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\FieldApiController::saveAction',  '_request' =>   array (    'value' =>     array (      'field' => 'array',      'id' => 'int',    ),    'csrf' => true,  ),  '_access' =>   array (    0 => 'formmaker: manage forms',  ),  '_route' => '@formmaker/api/field/save',);
-                        }
-                        not_formmakerapifieldsave:
-
-                        // @formmaker/api/field/save_1
-                        if (preg_match('#^/api/formmaker/field/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                            if ($this->context->getMethod() != 'POST') {
-                                $allow[] = 'POST';
-                                goto not_formmakerapifieldsave_1;
-                            }
-
-                            return $this->mergeDefaults(array_replace($matches, array('_route' => '@formmaker/api/field/save_1')), array (  '_controller' => 'Bixie\\Formmaker\\Controller\\FieldApiController::saveAction',  '_request' =>   array (    'value' =>     array (      'field' => 'array',      'id' => 'int',    ),    'csrf' => true,  ),  '_access' =>   array (    0 => 'formmaker: manage forms',  ),));
-                        }
-                        not_formmakerapifieldsave_1:
-
-                        // @formmaker/api/field/edit
-                        if ($pathinfo === '/api/formmaker/field/edit') {
-                            return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\FieldApiController::editAction',  '_request' =>   array (    'value' =>     array (      0 => 'id',    ),  ),  '_access' =>   array (    0 => 'formmaker: manage forms',  ),  '_route' => '@formmaker/api/field/edit',);
-                        }
-
-                        // @formmaker/api/field/updateorder
-                        if ($pathinfo === '/api/formmaker/field/updateOrder') {
-                            if ($this->context->getMethod() != 'POST') {
-                                $allow[] = 'POST';
-                                goto not_formmakerapifieldupdateorder;
-                            }
-
-                            return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\FieldApiController::updateOrderAction',  '_request' =>   array (    'value' =>     array (      'fields' => 'array',    ),    'csrf' => true,  ),  '_access' =>   array (    0 => 'formmaker: manage forms',  ),  '_route' => '@formmaker/api/field/updateorder',);
-                        }
-                        not_formmakerapifieldupdateorder:
-
-                        // @formmaker/api/field/delete
-                        if (preg_match('#^/api/formmaker/field/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                            if ($this->context->getMethod() != 'DELETE') {
-                                $allow[] = 'DELETE';
-                                goto not_formmakerapifielddelete;
-                            }
-
-                            return $this->mergeDefaults(array_replace($matches, array('_route' => '@formmaker/api/field/delete')), array (  '_controller' => 'Bixie\\Formmaker\\Controller\\FieldApiController::deleteAction',  '_request' =>   array (    'value' =>     array (      'id' => 'int',    ),    'csrf' => true,  ),  '_access' =>   array (    0 => 'formmaker: manage forms',  ),));
-                        }
-                        not_formmakerapifielddelete:
-
-                        // @formmaker/api/field/bulkdelete
-                        if ($pathinfo === '/api/formmaker/field/bulk') {
-                            if ($this->context->getMethod() != 'DELETE') {
-                                $allow[] = 'DELETE';
-                                goto not_formmakerapifieldbulkdelete;
-                            }
-
-                            return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\FieldApiController::bulkDeleteAction',  '_request' =>   array (    'value' =>     array (      'ids' => 'array',    ),    'csrf' => true,  ),  '_access' =>   array (    0 => 'formmaker: manage forms',  ),  '_route' => '@formmaker/api/field/bulkdelete',);
-                        }
-                        not_formmakerapifieldbulkdelete:
-
-                    }
-
-                    if (0 === strpos($pathinfo, '/api/formmaker/form')) {
-                        // @formmaker/api/form
-                        if ($pathinfo === '/api/formmaker/form') {
-                            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                                $allow = array_merge($allow, array('GET', 'HEAD'));
-                                goto not_formmakerapiform;
-                            }
-
-                            return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\FormApiController::indexAction',  '_route' => '@formmaker/api/form',);
-                        }
-                        not_formmakerapiform:
-
-                        // @formmaker/api/form/save
-                        if ($pathinfo === '/api/formmaker/form') {
-                            if ($this->context->getMethod() != 'POST') {
-                                $allow[] = 'POST';
-                                goto not_formmakerapiformsave;
-                            }
-
-                            return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\FormApiController::saveAction',  '_request' =>   array (    'value' =>     array (      'formitem' => 'array',      'id' => 'int',    ),    'csrf' => true,  ),  '_route' => '@formmaker/api/form/save',);
-                        }
-                        not_formmakerapiformsave:
-
-                        // @formmaker/api/form/save_1
-                        if (preg_match('#^/api/formmaker/form/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                            if ($this->context->getMethod() != 'POST') {
-                                $allow[] = 'POST';
-                                goto not_formmakerapiformsave_1;
-                            }
-
-                            return $this->mergeDefaults(array_replace($matches, array('_route' => '@formmaker/api/form/save_1')), array (  '_controller' => 'Bixie\\Formmaker\\Controller\\FormApiController::saveAction',  '_request' =>   array (    'value' =>     array (      'formitem' => 'array',      'id' => 'int',    ),    'csrf' => true,  ),));
-                        }
-                        not_formmakerapiformsave_1:
-
-                        // @formmaker/api/form/delete
-                        if (preg_match('#^/api/formmaker/form/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                            if ($this->context->getMethod() != 'DELETE') {
-                                $allow[] = 'DELETE';
-                                goto not_formmakerapiformdelete;
-                            }
-
-                            return $this->mergeDefaults(array_replace($matches, array('_route' => '@formmaker/api/form/delete')), array (  '_controller' => 'Bixie\\Formmaker\\Controller\\FormApiController::deleteAction',  '_request' =>   array (    'value' =>     array (      'id' => 'int',    ),    'csrf' => true,  ),));
-                        }
-                        not_formmakerapiformdelete:
-
-                        // @formmaker/api/form/bulkdelete
-                        if ($pathinfo === '/api/formmaker/form/bulk') {
-                            if ($this->context->getMethod() != 'DELETE') {
-                                $allow[] = 'DELETE';
-                                goto not_formmakerapiformbulkdelete;
-                            }
-
-                            return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\FormApiController::bulkDeleteAction',  '_request' =>   array (    'value' =>     array (      'ids' => 'array',    ),    'csrf' => true,  ),  '_route' => '@formmaker/api/form/bulkdelete',);
-                        }
-                        not_formmakerapiformbulkdelete:
-
-                    }
-
-                }
-
-                if (0 === strpos($pathinfo, '/api/formmaker/submission')) {
-                    // @formmaker/api/submission
-                    if ($pathinfo === '/api/formmaker/submission') {
-                        if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                            $allow = array_merge($allow, array('GET', 'HEAD'));
-                            goto not_formmakerapisubmission;
-                        }
-
-                        return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\SubmissionApiController::indexAction',  '_request' =>   array (    'value' =>     array (      'filter' => 'array',      'page' => 'int',    ),  ),  '_access' =>   array (    0 => 'formmaker: manage submissions',  ),  '_route' => '@formmaker/api/submission',);
-                    }
-                    not_formmakerapisubmission:
-
-                    // @formmaker/api/submission/ajax
-                    if ($pathinfo === '/api/formmaker/submission/ajax') {
-                        if ($this->context->getMethod() != 'POST') {
-                            $allow[] = 'POST';
-                            goto not_formmakerapisubmissionajax;
-                        }
-
-                        return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\SubmissionApiController::ajaxAction',  '_request' =>   array (    'value' =>     array (      'field_id' => 'int',      'action' => 'string',    ),  ),  '_route' => '@formmaker/api/submission/ajax',);
-                    }
-                    not_formmakerapisubmissionajax:
-
-                    // @formmaker/api/submission/save
-                    if ($pathinfo === '/api/formmaker/submission') {
-                        if ($this->context->getMethod() != 'POST') {
-                            $allow[] = 'POST';
-                            goto not_formmakerapisubmissionsave;
-                        }
-
-                        return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\SubmissionApiController::saveAction',  '_request' =>   array (    'value' =>     array (      'submission' => 'array',      'id' => 'int',      'g-recaptcha-response' => 'string',    ),    'csrf' => true,  ),  '_route' => '@formmaker/api/submission/save',);
-                    }
-                    not_formmakerapisubmissionsave:
-
-                    // @formmaker/api/submission/save_1
-                    if (preg_match('#^/api/formmaker/submission/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                        if ($this->context->getMethod() != 'POST') {
-                            $allow[] = 'POST';
-                            goto not_formmakerapisubmissionsave_1;
-                        }
-
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => '@formmaker/api/submission/save_1')), array (  '_controller' => 'Bixie\\Formmaker\\Controller\\SubmissionApiController::saveAction',  '_request' =>   array (    'value' =>     array (      'submission' => 'array',      'id' => 'int',      'g-recaptcha-response' => 'string',    ),    'csrf' => true,  ),));
-                    }
-                    not_formmakerapisubmissionsave_1:
-
-                    // @formmaker/api/submission/bulksave
-                    if ($pathinfo === '/api/formmaker/submission/bulk') {
-                        if ($this->context->getMethod() != 'POST') {
-                            $allow[] = 'POST';
-                            goto not_formmakerapisubmissionbulksave;
-                        }
-
-                        return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\SubmissionApiController::bulkSaveAction',  '_request' =>   array (    'value' =>     array (      'submissions' => 'array',    ),    'csrf' => true,  ),  '_access' =>   array (    0 => 'formmaker: manage submissions',  ),  '_route' => '@formmaker/api/submission/bulksave',);
-                    }
-                    not_formmakerapisubmissionbulksave:
-
-                    // @formmaker/api/submission/detail
-                    if ($pathinfo === '/api/formmaker/submission/detail') {
-                        return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\SubmissionApiController::detailAction',  '_request' =>   array (    'value' =>     array (      0 => 'submission_id',    ),    'csrf' => true,  ),  '_access' =>   array (    0 => 'formmaker: manage submissions',  ),  '_route' => '@formmaker/api/submission/detail',);
-                    }
-
-                    // @formmaker/api/submission/delete
-                    if (preg_match('#^/api/formmaker/submission/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                        if ($this->context->getMethod() != 'DELETE') {
-                            $allow[] = 'DELETE';
-                            goto not_formmakerapisubmissiondelete;
-                        }
-
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => '@formmaker/api/submission/delete')), array (  '_controller' => 'Bixie\\Formmaker\\Controller\\SubmissionApiController::deleteAction',  '_request' =>   array (    'value' =>     array (      'id' => 'int',    ),    'csrf' => true,  ),  '_access' =>   array (    0 => 'formmaker: manage submissions',  ),));
-                    }
-                    not_formmakerapisubmissiondelete:
-
-                    // @formmaker/api/submission/bulkdelete
-                    if ($pathinfo === '/api/formmaker/submission/bulk') {
-                        if ($this->context->getMethod() != 'DELETE') {
-                            $allow[] = 'DELETE';
-                            goto not_formmakerapisubmissionbulkdelete;
-                        }
-
-                        return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\SubmissionApiController::bulkDeleteAction',  '_request' =>   array (    'value' =>     array (      'ids' => 'array',    ),    'csrf' => true,  ),  '_access' =>   array (    0 => 'formmaker: manage submissions',  ),  '_route' => '@formmaker/api/submission/bulkdelete',);
-                    }
-                    not_formmakerapisubmissionbulkdelete:
-
-                    if (0 === strpos($pathinfo, '/api/formmaker/submission/csv')) {
-                        // @formmaker/api/submission/indexcsv
-                        if ($pathinfo === '/api/formmaker/submission/csv') {
-                            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                                $allow = array_merge($allow, array('GET', 'HEAD'));
-                                goto not_formmakerapisubmissionindexcsv;
-                            }
-
-                            return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\SubmissionApiController::indexCsvAction',  '_request' =>   array (    'value' =>     array (      'options' => 'array',    ),    'csrf' => true,  ),  '_access' =>   array (    0 => 'formmaker: manage submissions',  ),  '_route' => '@formmaker/api/submission/indexcsv',);
-                        }
-                        not_formmakerapisubmissionindexcsv:
-
-                        // @formmaker/api/submission/exportcsv
-                        if ($pathinfo === '/api/formmaker/submission/csv') {
-                            if ($this->context->getMethod() != 'POST') {
-                                $allow[] = 'POST';
-                                goto not_formmakerapisubmissionexportcsv;
-                            }
-
-                            return array (  '_controller' => 'Bixie\\Formmaker\\Controller\\SubmissionApiController::exportCsvAction',  '_request' =>   array (    'value' =>     array (      'options' => 'array',    ),    'csrf' => true,  ),  '_access' =>   array (    0 => 'formmaker: manage submissions',  ),  '_route' => '@formmaker/api/submission/exportcsv',);
-                        }
-                        not_formmakerapisubmissionexportcsv:
-
-                    }
-
-                }
-
-            }
-
             if (0 === strpos($pathinfo, '/admin/portfolio')) {
                 if (0 === strpos($pathinfo, '/admin/portfolio/project')) {
                     // @portfolio/project
@@ -1609,45 +1306,35 @@ class UrlMatcher2fdd8bb33c306a946f6d1ccda01d77a0249406b9 extends Symfony\Compone
 
         }
 
-        // @page/5
-        if ($pathinfo === '/contact') {
-            return array (  'id' => 5,  '_node' => 11,  '_controller' => 'Pagekit\\Site\\Controller\\PageController::indexAction',  '_route' => '@page/5',);
-        }
-
-        if (0 === strpos($pathinfo, '/nieuws-2')) {
+        if (0 === strpos($pathinfo, '/nieuws')) {
             // @blog
-            if ($pathinfo === '/nieuws-2') {
+            if ($pathinfo === '/nieuws') {
                 return array (  '_controller' => 'Pagekit\\Blog\\Controller\\SiteController::indexAction',  '_node' => 2,  '_route' => '@blog',);
             }
 
             // @blog/page
-            if (0 === strpos($pathinfo, '/nieuws-2/page') && preg_match('#^/nieuws\\-2/page/(?P<page>\\d+)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/nieuws/page') && preg_match('#^/nieuws/page/(?P<page>\\d+)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => '@blog/page')), array (  '_controller' => 'Pagekit\\Blog\\Controller\\SiteController::indexAction',  '_node' => 2,));
             }
 
-            if (0 === strpos($pathinfo, '/nieuws-2/feed')) {
+            if (0 === strpos($pathinfo, '/nieuws/feed')) {
                 // @blog/feed
-                if ($pathinfo === '/nieuws-2/feed') {
+                if ($pathinfo === '/nieuws/feed') {
                     return array (  '_controller' => 'Pagekit\\Blog\\Controller\\SiteController::feedAction',  '_node' => 2,  '_route' => '@blog/feed',);
                 }
 
                 // @blog/feed_1
-                if (preg_match('#^/nieuws\\-2/feed/(?P<type>[^/]++)$#s', $pathinfo, $matches)) {
+                if (preg_match('#^/nieuws/feed/(?P<type>[^/]++)$#s', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => '@blog/feed_1')), array (  '_controller' => 'Pagekit\\Blog\\Controller\\SiteController::feedAction',  '_node' => 2,));
                 }
 
             }
 
             // @blog/id
-            if (preg_match('#^/nieuws\\-2/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => '@blog/id')), array (  '_controller' => 'Pagekit\\Blog\\Controller\\SiteController::postAction',  '_node' => 2,));
+            if (preg_match('#^/nieuws/(?P<slug>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => '@blog/id')), array (  '_controller' => 'Pagekit\\Blog\\Controller\\SiteController::postAction',  '_node' => 2,  '_resolver' => 'Pagekit\\Blog\\UrlResolver',  '_variables' =>   array (    0 => 'id',  ),));
             }
 
-        }
-
-        // @page/4
-        if ($pathinfo === '/') {
-            return array (  'id' => 4,  '_node' => 9,  '_controller' => 'Pagekit\\Site\\Controller\\PageController::indexAction',  '_variables' =>   array (  ),  '_route' => '@page/4',);
         }
 
         if (0 === strpos($pathinfo, '/portfolio')) {
@@ -1661,6 +1348,11 @@ class UrlMatcher2fdd8bb33c306a946f6d1ccda01d77a0249406b9 extends Symfony\Compone
                 return $this->mergeDefaults(array_replace($matches, array('_route' => '@vacatures/id')), array (  '_controller' => 'Bixie\\Portfolio\\Controller\\SiteController::projectAction',  '_node' => 3,));
             }
 
+        }
+
+        // @page/1
+        if ($pathinfo === '/') {
+            return array (  'id' => 1,  '_node' => 1,  '_controller' => 'Pagekit\\Site\\Controller\\PageController::indexAction',  '_variables' =>   array (  ),  '_route' => '@page/1',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
