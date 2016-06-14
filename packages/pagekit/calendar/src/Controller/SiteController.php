@@ -43,7 +43,7 @@ class SiteController
         $total = ceil($count / $limit);
         $page = max(1, min($total, $page));
 
-        $query->offset(($page - 1) * $limit)->limit($limit)->orderBy('date', 'DESC');
+        $query->offset(($page - 1) * $limit)->limit($limit)->orderBy('eventDate', 'ASC');
 
         foreach ($events = $query->get() as $event) {
             $event->excerpt = App::content()->applyPlugins($event->excerpt, ['event' => $event, 'markdown' => $event->get('markdown')]);

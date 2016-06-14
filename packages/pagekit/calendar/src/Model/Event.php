@@ -51,8 +51,8 @@ class Event implements \JsonSerializable
     /** @Column(type="string") */
     public $facebook_url;
 
-    /** @Column(type="string") */
-    public $tickets_url;
+    // * @Column(type="string") 
+    // public $tickets_url;
 
     /** @Column(type="text") */
     public $excerpt = '';

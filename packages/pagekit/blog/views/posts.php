@@ -1,5 +1,7 @@
 <?php $view->script('posts', 'blog:app/bundle/posts.js', 'vue') ?>
 
+<?php print_r('sdfasdfsd'.date_default_timezone_get()) ?>
+
 <?php foreach ($posts as $post) : ?>
 <article class="uk-article">
 

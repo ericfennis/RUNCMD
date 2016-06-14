@@ -19,7 +19,6 @@ class EventApiController
     {
         $query  = Event::query();
         $filter = array_merge(array_fill_keys(['status', 'search', 'order', 'limit'], ''), $filter);
-
         extract($filter, EXTR_SKIP);
 
         if(!App::user()->hasAccess('calendar: manage all events')) {
@@ -36,7 +35,7 @@ class EventApiController
             });
         }
 
-        if (!preg_match('/^(date|title)\s(asc|desc)$/i', $order, $order)) {
+        if (!preg_match('/^(eventDate|date|title)\s(asc|desc)$/i', $order, $order)) {
             $order = [1 => 'date', 2 => 'desc'];
         }
 

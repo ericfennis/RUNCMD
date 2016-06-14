@@ -39,6 +39,7 @@
             <thead>
                 <tr>
                     <th class="pk-table-width-minimum"><input type="checkbox" v-check-all:selected.literal="input[name=id]" number></th>
+                    <th class="pk-table-width-100" v-order:eventDate="config.filter.order">{{ 'Event Date' | trans }}</th>
                     <th class="pk-table-min-width-200" v-order:title="config.filter.order">{{ 'Title' | trans }}</th>
                     <th class="pk-table-width-100 uk-text-center">
                         <input-filter :title="$trans('Status')" :value.sync="config.filter.status" :options="statusOptions"></input-filter>
@@ -50,6 +51,9 @@
             <tbody>
                 <tr class="check-item" v-for="event in events" :class="{'uk-active': active(event)}">
                     <td><input type="checkbox" name="id" :value="event.id"></td>
+                    <td>
+                        {{ event.eventDate | date }}
+                    </td>
                     <td>
                         <a :href="$url.route('admin/calendar/event/edit', { id: event.id })">{{ event.title }}</a>
                     </td>

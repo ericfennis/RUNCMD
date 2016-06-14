@@ -1,30 +1,55 @@
 <?php $view->script('events', 'calendar:app/bundle/events.js', 'vue') ?>
+<?php $view->script('events', 'calendar:app/bundle/events.js', ['uikit-grid', 'jquery']) ?>
+
+<article class="uk-article uk-container uk-container-center">
+        <div class="uk-grid uk-grid-width-1-1 uk-grid-width-small-1-1 uk-grid-width-large-1-3 uk-grid-width-xlarge-1-3" data-uk-grid="{gutter: 40}">
+
+        
 
 <?php foreach ($events as $event) : ?>
-<article class="uk-article">
+<?php 
+    date_default_timezone_set('Europe/Amsterdam');
+    $date = $event->eventDate->getTimestamp();
+    
+?>
+<div data-uk-filter>
+            <div class="uk-panel uk-text-left event-item box-shadow">
 
-    <?php if ($image = $event->get('image.src')): ?>
-    <a class="uk-display-block" href="<?= $view->url('@calendar/id', ['id' => $event->id]) ?>"><img src="<?= $image ?>" alt="<?= $event->get('image.alt') ?>"></a>
-    <?php endif ?>
-
-    <h1 class="uk-article-title"><a href="<?= $view->url('@calendar/id', ['id' => $event->id]) ?>"><?= $event->title ?></a></h1>
-
-    <p class="uk-article-meta">
-        <?= __('Written by %name% on %date%', ['%name%' => $event->user->name, '%date%' => '<time datetime="'.$event->date->format(\DateTime::ATOM).'" v-cloak>{{ "'.$event->date->format(\DateTime::ATOM).'" | date "longDate" }}</time>' ]) ?>
-    </p>
-
-    <div class="uk-margin"><?= $event->excerpt ?: $event->content ?></div>
-
-    <ul class="uk-subnav">
-
-        <?php if (isset($event->readmore) && $event->readmore || $event->excerpt) : ?>
-        <li><a href="<?= $view->url('@calendar/id', ['id' => $event->id]) ?>"><?= __('Read more') ?></a></li>
-        <?php endif ?>
-
-    </ul>
-
-</article>
+                    <figure>
+                    <?php if ($image = $event->get('image.src')): ?>
+                                <a class="uk-display-block" href="<?= $view->url('@calendar/id', ['id' => $event->id]) ?>">
+                                    <div class="lock-ratio">
+                                        <img src="<?= $image ?>" alt="<?= $event->get('image.alt') ?>">
+                                    </div>
+                                </a>
+                <?php endif ?>
+                    </figure>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <span class="event-date-number">
+                                <?= date ('j',$date); ?>
+                            </span>
+                            <span class="event-date-month">
+                                <?= date ('M',$date); ?>
+                            </span>
+                        </div>
+                        <div class="event-title">
+                            <h3 class="uk-h3"><a href="<?= $view->url('@calendar/id', ['id' => $event->id]) ?>"><?= $event->title ?></a></h3>
+                        </div>
+                        
+                    </div>
+        
+            </div>
+        </div>
 <?php endforeach ?>
+
+       </div>
+</article> 
+        
+        
+
+
+
 
 <?php
 

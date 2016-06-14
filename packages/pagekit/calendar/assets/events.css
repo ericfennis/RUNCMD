@@ -1,0 +1,67 @@
+.uk-block-default {
+	background:transparent;
+}
+.uk-panel {
+	background: #fff;
+}
+.lock-ratio {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 60%; /* here the desired aspect ratio */
+}
+.lock-ratio img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	max-width: 100%;
+	min-width: 100%;
+	height: auto;
+	display: block;
+}
+.event-item h3 {
+	margin: 0;
+	font-family: 'Open Sans';
+	font-style: italic;
+	font-weight: 600;
+}
+.event-item figure {
+	margin: 0;
+}
+.event-item a:hover img{
+	opacity: 0.8;
+}
+.event-content {
+	padding: 24px;
+	display: table;
+}
+.event-date, .event-title {
+	display: table-cell;
+	vertical-align: middle;
+}
+.event-date {
+	height: 72px;
+	width: 72px;
+	border-right: 1px solid #ccc;
+	font-family: 'Open Sans';
+	text-align: center;
+	padding-right: 24px;
+}
+.event-title {
+	height: 72px;
+	padding-left: 24px;
+}
+.event-title h3 {
+	word-break: break-word;
+}
+.event-date .event-date-number{
+	color: #888;
+	font-size: 42px;
+	line-height: 42px;
+}
+.event-date .event-date-month {
+	font-size: 28px;
+	color: #ad213f;
+}

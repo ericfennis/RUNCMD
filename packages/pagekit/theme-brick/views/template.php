@@ -86,7 +86,7 @@
                 </div>
                 <?php endif; ?>
 
-                <div id="tm-main" class="tm-main uk-block <?= $params['main_style'] ?>">
+                <div id="tm-main" class="tm-main uk-block">
 
                     <div class="uk-grid" data-uk-grid-match data-uk-grid-margin>
 
