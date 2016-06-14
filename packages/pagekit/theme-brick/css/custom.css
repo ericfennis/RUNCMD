@@ -1,0 +1,86 @@
+/*Header*/
+.uk-navbar {
+	background: #fff!important;
+}
+
+ul.uk-navbar-nav a {
+     color: #000000 ! important;
+      margin-top: -50px;
+}
+
+ul.uk-navbar-nav li.uk-active a {
+     color: #107e8b ! important;
+}
+
+.tm-logo.uk-responsive-height {
+    height: 115px ! important;
+    margin-top: -60px;
+    margin-left: 70px;
+    width: 110px ! important;
+}
+
+.uk-button {
+    background: #2896c8!important;
+}
+
+
+ul {
+    list-style: none;
+}
+/*Social media*/
+.sm-content {
+    float: right;
+}
+
+.sm-content li{
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 35px;
+}
+
+.sm-content li a img{
+	height: 46px;
+	width: 46px;
+}
+
+/*Lid worden*/
+.button {
+	padding:15px 30px;
+	background:#a0cd46;
+	color:#fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.box-shadow {
+	-webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,.16);
+	-moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,.16);
+	box-shadow: 0px 3px 3px 0px rgba(0,0,0,.16);
+	line-height: 20px;
+}
+
+#lid-worden {
+margin-top: 45px;
+margin-left: 300px;
+display: inline-block;
+font-size: 20px;
+    float: right;
+}
+
+#lid-worden a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+  div#tm-hero.tm-hero.uk-block.uk-block-large.uk-cover-background {padding-top: 120px; padding-bottom: 0;}
+.tm-container {margin-bottom: 0px!important;}
+.tm-footer {background: #444444!important;}
+.tm-footer #formmakerfield_2 {background: #fff;}
+.tm-footer .uk-button {color: #fff!important;}
+.tm-footer .uk-button:hover {color: #000!important;}
+.tm-footer .uk-panel-title {color: #a0cd46;}
+
+
+
+
+article#portfolio-project div.uk-grid .uk-badge.uk-margin-small-right {display: none;}
