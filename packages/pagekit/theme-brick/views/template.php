@@ -42,6 +42,32 @@
                         <?php endif ?>
 
                     </nav>
+<<<<<<< HEAD
+=======
+                    <nav id="social-media">
+                        <ul class="sm-content">
+                            <li>
+                                <a href="https://www.facebook.com/svruncmd/">
+                                    <img src="packages/pagekit/theme-brick/img/facebook.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/svruncmd/">
+                                    <img src="packages/pagekit/theme-brick/img/instalogo.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a id="linked-in" href="https://www.linkedin.com/company/sv-run-cmd">
+                                    <img src="packages/pagekit/theme-brick/img/linkedin.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="lid-worden">  
+                        <a href="/lidworden" class="button box-shadow" id="lid-font">Lid worden!</a>
+                    </div>
+                </header>
+>>>>>>> origin/carlo
 
                 </div>
                 <?php endif ?>
@@ -94,12 +120,34 @@
 
                 </div>
                 <?php endif; ?>
-
+<!--Footer!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
                 <?php if ($view->position()->exists('footer')) : ?>
                 <div id="tm-footer" class="tm-footer uk-block-secondary uk-contrast">
 
-                    <section class="uk-grid uk-grid-match" data-uk-grid-margin>
-                        <?= $view->position('footer', 'position-grid.php') ?>
+                    <nav id="footer-menu">
+                        <div class="onderwerp-style" id="footer-menu">Menu</div>
+                        <ul>
+                            <a href=""><li>Wie zijn wij?</li></a>
+                            <a href=""><li>Evenementen</li></a>
+                            <a href=""><li>Nieuws</li></a>
+                            <a href=""><li>Vacaturebank</li></a>
+                            <a href=""><li>Contact</li></a>
+                        </ul>
+                    </nav>
+                    <section>
+                        <div class="onderwerp-style">Nieuwsbrief ontvangen?</div>
+                        <div class="sub-content-footer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue pellentesque dapibus. Morbi maximus scelerisque erat, id vehicula dui mattis.</div>
+                        <a href="\abonneren" class="button box-shadow">Abonneren!</a>
+                    </section>
+                    <section>
+                        <div class="onderwerp-style">Lid worden?</div>
+                        <div class="sub-content-footer"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue pellentesque dapibus. Morbi maximus scelerisque erat, id vehicula dui mattis.</div>
+                        <a href="/lid-worden" class="button box-shadow">Lid worden!</a>
+                    </section>
+                    <section>
+                        <div class="onderwerp-style" id="sponsoren">Sponsoren</div>
+                        <a href="/sterc"><img src="packages/pagekit/theme-brick/img/sterc.svg"></a>
+                        <a href="/nhl"><img src="packages/pagekit/theme-brick/img/nhl.svg"></a>
                     </section>
 
                 </div>
