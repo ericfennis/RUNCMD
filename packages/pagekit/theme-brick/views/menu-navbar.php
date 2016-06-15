@@ -33,12 +33,6 @@
 
     </li>
     <?php endforeach ?>
-    <li class="">
-        <a href="/runcmd/portfolio">Contact</a>
-
-        
-    </li><li class="">
-        <a href="/runcmd/portfolio">Wie zijn wij</a></li>
 
 <?php if ($root->getDepth() === 0) : ?>
 </ul>
