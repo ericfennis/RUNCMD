@@ -10,10 +10,10 @@
     array (
       'mysql' => 
       array (
-        'host' => 'localhost',
-        'user' => 'root',
-        'password' => '',
-        'dbname' => 'runcmd',
+        'host' => 'runcmd.leeuwarderwebdesign.nl',
+        'user' => 'runcmd_test',
+        'password' => 'PED9Io6FdI',
+        'dbname' => 'runcmd_test',
         'prefix' => 'pk_',
       ),
     ),

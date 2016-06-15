@@ -28,11 +28,11 @@ $config['project_image_class'] = in_array($config['project']['image_align'], ['r
 	<?php if (in_array($config['project']['show_navigation'], ['both', 'top']) && ($next || $previous)) : ?>
 		<ul class="uk-pagination">
 			<?php if ($previous) : ?>
-				<li class="uk-pagination-previous"><a href="<?= $app->url('@portfolio/id', ['id' => $previous->id]) ?>">
+				<li class="uk-pagination-previous"><a href="<?= $app->url('@vacatures/id', ['id' => $previous->id]) ?>">
 						<i class="uk-icon-arrow-left uk-margin-small-right"></i><?= $previous->title ?></a></li>
 			<?php endif; ?>
 			<?php if ($next) : ?>
-				<li class="uk-pagination-next"><a href="<?= $app->url('@portfolio/id', ['id' => $next->id]) ?>">
+				<li class="uk-pagination-next"><a href="<?= $app->url('@vacatures/id', ['id' => $next->id]) ?>">
 						<?= $next->title ?><i class="uk-icon-arrow-right uk-margin-small-left"></i></a></li>
 			<?php endif; ?>
 		</ul>
@@ -89,8 +89,7 @@ $config['project_image_class'] = in_array($config['project']['image_align'], ['r
 
 			</div>
 			<div class="uk-width-medium-1-4">
-				<div class="uk-panel uk-panel-box">
-
+				<div>
 					<?php if ($config['project']['metadata_position'] == 'sidebar' && (!empty($project->date) || !empty($project->client))) : ?>
 							<?php if (!empty($project->date)) : ?>
 								<dl class="uk-description-list">
@@ -129,7 +128,7 @@ $config['project_image_class'] = in_array($config['project']['image_align'], ['r
 						</div>
 					<?php endif; ?>
 
-				</div>
+				
 			</div>
 		</div>
 
@@ -165,11 +164,11 @@ $config['project_image_class'] = in_array($config['project']['image_align'], ['r
 	<?php if (in_array($config['project']['show_navigation'], ['both', 'bottom']) && ($next || $previous)) : ?>
 		<ul class="uk-pagination">
 		<?php if ($previous) : ?>
-			<li class="uk-pagination-previous"><a href="<?= $app->url('@portfolio/id', ['id' => $previous->id]) ?>">
+			<li class="uk-pagination-previous"><a href="<?= $app->url('@vacatures/id', ['id' => $previous->id]) ?>">
 					<i class="uk-icon-arrow-left uk-margin-small-right"></i><?= $previous->title ?></a></li>
 		<?php endif; ?>
 			<?php if ($next) : ?>
-			<li class="uk-pagination-next"><a href="<?= $app->url('@portfolio/id', ['id' => $next->id]) ?>">
+			<li class="uk-pagination-next"><a href="<?= $app->url('@vacatures/id', ['id' => $next->id]) ?>">
 					<?= $next->title ?><i class="uk-icon-arrow-right uk-margin-small-left"></i></a></li>
 		<?php endif; ?>
 		</ul>

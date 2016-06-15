@@ -18,7 +18,7 @@ class PortfolioController
     {
         return [
             '$view' => [
-                'title' => __('Vacatures'),
+                'title' => __('Portfolio'),
                 'name'  => 'bixie/portfolio/admin/portfolio.php'
             ],
             '$data' => [
@@ -91,7 +91,7 @@ class PortfolioController
 		$portfolio = App::module('bixie/portfolio');
         return [
             '$view' => [
-                'title' => __('Vacature settings'),
+                'title' => __('Portfolio settings'),
                 'name'  => 'bixie/portfolio/admin/settings.php'
             ],
             '$data' => [

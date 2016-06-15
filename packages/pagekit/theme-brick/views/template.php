@@ -8,30 +8,36 @@
         <?php $view->style('theme', 'theme:css/theme.css') ?>
         <?php $view->style('custom', 'theme:css/custom.css') ?>
         <?php $view->script('theme', 'theme:js/theme.js', ['uikit-sticky',  'uikit-lightbox',  'uikit-parallax']) ?>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600italic,700,700italic' rel='stylesheet' type='text/css'>
     </head>
     <body>
 
-        <div class="uk-container uk-container-center">
-            <div class="tm-container">
 
                 <?php if ($params['logo'] || $view->menu()->exists('main') || $view->position()->exists('navbar')) : ?>
-                <div class="<?= $params['classes.navbar'] ?>" <?= $params['classes.sticky'] ?>>
-
+                <header class="box-shadow <?= $params['classes.navbar'] ?>" <?= $params['classes.sticky'] ?>>
+                    <div class="uk-container uk-container-center">
                     <nav class="uk-navbar">
 
-                        <a class="uk-navbar-brand" href="<?= $view->url()->get() ?>">
-                            <?php if ($params['logo']) : ?>
-                                <img class="tm-logo uk-responsive-height" src="<?= $this->escape($params['logo']) ?>" alt="">
-                                <img class="tm-logo-contrast uk-responsive-height" src="<?= ($params['logo_contrast']) ? $this->escape($params['logo_contrast']) : $this->escape($params['logo']) ?>" alt="">
-                            <?php else : ?>
-                                <?= $params['title'] ?>
-                            <?php endif ?>
+                        <a id="logo" class="uk-display-inline-block uk-float-left" href="<?= $view->url()->get() ?>">
+                            <img src="packages/pagekit/theme-brick/img/logo.png" alt="Home">
                         </a>
-
+                       
                         <?php if ($view->menu()->exists('main') || $view->position()->exists('navbar')) : ?>
-                        <div class="uk-navbar-flip uk-visible-large">
-                                                                                       <div id="social-media">
-                        <ul class="sm-content">
+                        <div class="uk-display-inline-block uk-float-left uk-visible-large">
+                            <?= $view->menu('main', 'menu-navbar.php') ?>
+                            <?= $view->position('navbar', 'position-blank.php') ?>
+
+                        </div>
+                        <?php endif ?>
+
+                        <?php if ($view->position()->exists('offcanvas') || $view->menu()->exists('offcanvas')) : ?>
+                        <div class="uk-display-inline-block uk-hidden-large">
+                            <a href="#offcanvas" class="uk-navbar-toggle" data-uk-offcanvas></a>
+                        </div>
+                        <div class="uk-display-inline-block uk-float-right" id="lid-worden">  
+                            <a href="/lidworden" class="button box-shadow" id="lid-font">Lid worden!</a>
+                        </div>
+                        <ul class="uk-display-inline-block uk-float-right sm-content">
                             <li>
                                 <a href="https://www.facebook.com/svruncmd/">
                                     <img src="packages/pagekit/theme-brick/img/facebook.png">
@@ -48,31 +54,23 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
-                    <div id="lid-worden">
-                        <a href="/lidworden" class="button box-shadow" id="lid-font">Lid worden!</a>
-                    </div>
-                            <?= $view->menu('main', 'menu-navbar.php') ?>
-                            <?= $view->position('navbar', 'position-blank.php') ?>
-
-                        </div>
                         <?php endif ?>
 
-                        <?php if ($view->position()->exists('offcanvas') || $view->menu()->exists('offcanvas')) : ?>
-                        <div class="uk-navbar-flip uk-hidden-large">
-                            <a href="#offcanvas" class="uk-navbar-toggle" data-uk-offcanvas></a>
-                        </div>
-                        <?php endif ?>
+                        
 
+                        
                     </nav>
+                    
+                    </div>
+                </header>
 
-                </div>
                 <?php endif ?>
 
                 <?php if ($view->position()->exists('hero')) : ?>
                 <div id="tm-hero" class="tm-hero uk-block uk-block-large uk-cover-background <?= $params['classes.hero'] ?>" <?= $params['hero_image'] ? "style=\"background-image: url('{$view->url($params['hero_image'])}');\"" : '' ?> <?= $params['classes.parallax'] ?>>
 
-                    <section class="uk-grid uk-grid-match" data-uk-grid-margin>
+                    <section class="uk-grid uk-grid-match uk-container uk-container-center" data-uk-grid-margin>
+
                         <?= $view->position('hero', 'position-grid.php') ?>
                     </section>
 
@@ -89,24 +87,19 @@
                 </div>
                 <?php endif; ?>
 
-                <div id="tm-main" class="tm-main uk-block <?= $params['main_style'] ?>">
-
-                    <div class="uk-grid" data-uk-grid-match data-uk-grid-margin>
-
-                        <main class="<?= $view->position()->exists('sidebar') ? 'uk-width-medium-3-4' : 'uk-width-1-1'; ?>">
-                            <?= $view->render('messages') ?>
-                            <?= $view->render('content') ?>
-                        </main>
-
-                        <?php if ($view->position()->exists('sidebar')) : ?>
-                        <aside class="uk-width-medium-1-4 <?= $params['sidebar_first'] ? 'uk-flex-order-first-medium' : ''; ?>">
-                            <?= $view->position('sidebar', 'position-panel.php') ?>
-                        </aside>
-                        <?php endif ?>
-
-                    </div>
-
-                </div>
+                <main id="tm-main" class="tm-main">
+                    
+                        <div class="uk-container uk-container-center uk-grid" data-uk-grid-match data-uk-grid-margin>
+                                
+                              
+                                <?= $view->render('content') ?>
+                             
+                                <?php if ($view->position()->exists('hero')) : ?>
+                                        <?= $view->position('homepage', 'position-grid.php') ?>
+                                <?php endif; ?>
+                        </div>
+                    
+                </main>
 
                 <?php if ($view->position()->exists('bottom')) : ?>
                 <div id="tm-bottom" class="tm-bottom uk-block <?= $params['bottom_style'] ?>">
@@ -117,19 +110,41 @@
 
                 </div>
                 <?php endif; ?>
-
+<!--Footer!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
                 <?php if ($view->position()->exists('footer')) : ?>
-                <div id="tm-footer" class="tm-footer uk-block-secondary uk-contrast">
-
-                    <section class="uk-grid uk-grid-match" data-uk-grid-margin>
-                        <?= $view->position('footer', 'position-grid.php') ?>
+                <footer class="uk-contrast">
+                    <?= $view->render('footer') ?>
+                    <div class="uk-container uk-container-center uk-grid">
+                    <nav class="uk-width-large-1-4" id="footer-menu">
+                        <h3>Menu</h3>
+                        <ul>
+                            <a href=""><li>Wie zijn wij?</li></a>
+                            <a href=""><li>Evenementen</li></a>
+                            <a href=""><li>Nieuws</li></a>
+                            <a href=""><li>Vacaturebank</li></a>
+                            <a href=""><li>Contact</li></a>
+                        </ul>
+                    </nav>
+                    <section class="uk-width-large-1-4">
+                        <h3>Nieuwsbrief ontvangen?</h3>
+                        <div class="sub-content-footer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue pellentesque dapibus. Morbi maximus scelerisque erat, id vehicula dui mattis.</div>
+                        <a href="\abonneren" class="button box-shadow">Abonneren!</a>
                     </section>
-
-                </div>
+                    <section class="uk-width-large-1-4">
+                        <h3>Lid worden?</h3>
+                        <div class="sub-content-footer"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue pellentesque dapibus. Morbi maximus scelerisque erat, id vehicula dui mattis.</div>
+                        <a href="/lid-worden" class="button box-shadow">Lid worden!</a>
+                    </section>
+                    <section class="uk-width-large-1-4">
+                        <h3>Sponsoren</h3>
+                        <a class="sponsors" href="https://www.sterc.nl/"><img width="190" height="120" src="packages/pagekit/theme-brick/img/sterc.svg"></a>
+                        <a class="sponsors" href="https://www.nhl.nl/"><img width="190" height="120" src="packages/pagekit/theme-brick/img/nhl.svg"></a>
+                    </section>
+                    </div>
+                </footer>
                 <?php endif; ?>
 
-            </div>
-        </div>
+        
 
         <?php if ($view->position()->exists('offcanvas') || $view->menu()->exists('offcanvas')) : ?>
         <div id="offcanvas" class="uk-offcanvas">
@@ -155,7 +170,7 @@
         </div>
         <?php endif ?>
 
-        <?= $view->render('footer') ?>
+        
 
     </body>
 </html>

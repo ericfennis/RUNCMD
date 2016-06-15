@@ -32,7 +32,7 @@
 		<div class="uk-position-relative" data-uk-margin>
 
 			<div data-uk-dropdown="{ mode: 'click' }">
-				<a class="uk-button uk-button-primary" :href="$url.route('admin/portfolio/project/edit')">
+				<a class="uk-button uk-button-primary" :href="$url.route('admin/vacatures/project/edit')">
 					{{ 'Add project' | trans }}</a>
 
 			</div>
@@ -59,7 +59,7 @@
 			<tr class="check-item" v-for="project in projects" :class="{'uk-active': active(project)}">
 				<td><input type="checkbox" name="id" value="{{ project.id }}"></td>
 				<td>
-					<a :href="$url.route('admin/portfolio/project/edit', { id: project.id })">{{ project.title }}</a>
+					<a :href="$url.route('admin/vacatures/project/edit', { id: project.id })">{{ project.title }}</a>
 				</td>
 				<td class="uk-text-center">
 					<a title="{{ getStatusText(project) }}" :class="{

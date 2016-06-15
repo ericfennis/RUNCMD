@@ -20,8 +20,8 @@ return [
 
 	'nodes' => [
 
-		'portfolio' => [
-			'name' => '@vacatures',
+		'vacatures' => [
+			'name' => '@portfolio',
 			'label' => 'Vacaturebank',
 			'controller' => 'Bixie\\Portfolio\\Controller\\SiteController',
 			'protected' => true,
@@ -32,7 +32,7 @@ return [
 
 	'routes' => [
 
-		'/portfolio' => [
+		'/vacatures' => [
 			'name' => '@portfolio',
 			'controller' => [
 				'Bixie\\Portfolio\\Controller\\PortfolioController'
@@ -65,14 +65,14 @@ return [
 		],
 
 		'portfolio: project' => [
-			'label' => 'Projects',
+			'label' => 'Vacatures',
 			'parent' => 'portfolio',
 			'url' => '@portfolio/project',
 			'access' => 'portfolio: manage portfolio',
 			'active' => '@portfolio/project*'
 		],
 
-		'portfolio: settings' => [
+    	'portfolio: settings' => [
 			'label' => 'Settings',
 			'parent' => 'portfolio',
 			'url' => '@portfolio/settings',
@@ -97,17 +97,17 @@ return [
 	'settings' => '@portfolio/settings',
 
 	'config' => [
-		'portfolio_title' => 'Mijn Vacatures',
+		'portfolio_title' => 'My portfolio',
 		'portfolio_text' => '<p>This is an overview of my latest projects.</p>',
 		'portfolio_image' => '',
 		'projects_per_page' => 20,
 		'portfolio_image_align' => 'left',
 		'columns' => 1,
-		'columns_small' => 2,
-		'columns_medium' => '',
-		'columns_large' => 4,
-		'columns_xlarge' => 6,
-		'columns_gutter' => 20,
+		'columns_small' => 1,
+		'columns_medium' => 1,
+		'columns_large' => 1,
+		'columns_xlarge' => 1,
+		'columns_gutter' => 40,
 		'filter_tags' => true,
 		'teaser' => [
 			'show_title' => true,
@@ -160,7 +160,7 @@ return [
 			'columns_xlarge' => 6,
 			'columns_gutter' => 20
 		],
-		'cache_path' => str_replace(App::path(), '', App::get('path.cache') . '/vacatures'),
+		'cache_path' => str_replace(App::path(), '', App::get('path.cache') . '/portfolio'),
 		'date_format' => 'F Y',
 		'markdown' => true,
 		'datafields' => []

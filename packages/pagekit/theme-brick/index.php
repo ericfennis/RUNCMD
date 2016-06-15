@@ -25,8 +25,8 @@ return [
         'sidebar' => 'Sidebar',
         'bottom' => 'Bottom',
         'footer' => 'Footer',
-        'offcanvas' => 'Offcanvas'
-
+        'offcanvas' => 'Offcanvas',
+        'homepage' => 'Homepage'
     ],
 
     /**

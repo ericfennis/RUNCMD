@@ -25,10 +25,10 @@ $config['grid_teaser'] .= $config['teaser']['columns_xlarge'] ? ' uk-grid-width-
 $config['portfolio_image_class'] = in_array($config['portfolio_image_align'], ['right', 'left']) ? 'uk-align-' . $config['portfolio_image_align'] : 'uk-text-center'
 ?>
 
-<article id="portfolio-projects">
+<article id="portfolio-projects" class="uk-width-1-1 uk-row-first">
 
 	<?php if ($config['portfolio_title']) : ?>
-	    <h1 class="uk-article-title"><?= $config['portfolio_title'] ?></h1>
+	    <h1><?= $config['portfolio_title'] ?></h1>
 	<?php endif; ?>
 	<div class="uk-clearfix">
 
@@ -56,7 +56,7 @@ $config['portfolio_image_class'] = in_array($config['portfolio_image_align'], ['
 		</ul>
 	</div>
 	<?php endif; ?>
-
+	
 	<div class="uk-grid <?= $grid ?>" data-uk-grid="{gutter: <?= $config['columns_gutter'] ?>, controls: '<?= $config['filter_tags'] ? '#portfolio-filter': ''; ?>'}">
 
 		<?php foreach ($projects as $project) : ?>

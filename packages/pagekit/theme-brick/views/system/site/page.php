@@ -1,3 +1,4 @@
+<?php if(!empty($page->content)): ?>
 <article class="uk-article<?= $node->theme['alignment'] ? ' uk-text-center' : '' ?>">
 
     <?php if (!$node->theme['title_hide']) : ?>
@@ -7,3 +8,4 @@
     <?= $page->content ?>
 
 </article>
+<?php endif; ?>

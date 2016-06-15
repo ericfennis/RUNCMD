@@ -38,40 +38,6 @@
         "description": "Pagekit's default theme."
     },
     {
-        "name": "pagekit/blog",
-        "version": "1.0.1",
-        "version_normalized": "1.0.1.0",
-        "dist": {
-            "type": "zip",
-            "url": "https://pagekit.com/package/pagekit/blog/1.0.1.zip",
-            "reference": null,
-            "shasum": "71ff7e51bfcfa17837d3fe6682012d0054392f40"
-        },
-        "archive": {
-            "exclude": [
-                "node_modules",
-                "!/app"
-            ]
-        },
-        "type": "pagekit-extension",
-        "extra": {
-            "icon": "icon.svg",
-            "scripts": "scripts.php"
-        },
-        "installation-source": "dist",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Pagekit",
-                "email": "info@pagekit.com",
-                "homepage": "http://pagekit.com"
-            }
-        ],
-        "description": "A blog extensions with a built-in comment system."
-    },
-    {
         "name": "lusitanian/oauth",
         "version": "v0.3.6",
         "version_normalized": "0.3.6.0",
@@ -366,5 +332,39 @@
             }
         ],
         "description": "Create a beautiful portfolio in your Pagekit site"
+    },
+    {
+        "name": "pagekit/blog",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://pagekit.com/package/pagekit/blog/1.0.1.zip",
+            "reference": null,
+            "shasum": "71ff7e51bfcfa17837d3fe6682012d0054392f40"
+        },
+        "archive": {
+            "exclude": [
+                "node_modules",
+                "!/app"
+            ]
+        },
+        "type": "pagekit-extension",
+        "extra": {
+            "icon": "icon.svg",
+            "scripts": "scripts.php"
+        },
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Pagekit",
+                "email": "info@pagekit.com",
+                "homepage": "http://pagekit.com"
+            }
+        ],
+        "description": "A blog extensions with a built-in comment system."
     }
 ]

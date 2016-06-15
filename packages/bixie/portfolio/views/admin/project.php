@@ -16,7 +16,7 @@
 		</div>
 		<div data-uk-margin>
 
-			<a class="uk-button uk-margin-small-right" :href="$url.route('admin/portfolio/project')">{{ project.id ?
+			<a class="uk-button uk-margin-small-right" :href="$url.route('admin/vacatures/project')">{{ project.id ?
 				'Close' :
 				'Cancel' | trans }}</a>
 			<button class="uk-button uk-button-primary" type="submit">{{ 'Save' | trans }}</button>

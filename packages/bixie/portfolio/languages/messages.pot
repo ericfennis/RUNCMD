@@ -75,7 +75,7 @@ msgstr ""
 msgid "Select"
 msgstr ""
 
-msgid "Vacature %title% saved."
+msgid "Project %title% saved."
 msgstr ""
 
 msgid "Enable Markdown"
@@ -84,22 +84,22 @@ msgstr ""
 msgid "Show in teaser"
 msgstr ""
 
-msgid "Vacatures"
+msgid "Portfolio"
 msgstr ""
 
-msgid "Invalid vacature id."
+msgid "Invalid project id."
 msgstr ""
 
-msgid "Edit vacature"
+msgid "Edit project"
 msgstr ""
 
-msgid "Add vacature"
+msgid "Add project"
 msgstr ""
 
-msgid "Vacature settings"
+msgid "Portfolio settings"
 msgstr ""
 
-msgid "Vacature not found."
+msgid "Project not found."
 msgstr ""
 
 msgid "Invalid slug."
@@ -123,7 +123,7 @@ msgstr ""
 msgid "URL"
 msgstr ""
 
-msgid "No vacatures found."
+msgid "No projects found."
 msgstr ""
 
 msgid "{0} %count% Projects|{1} %count% Project|]1,Inf[ %count% Projects"
@@ -144,10 +144,10 @@ msgstr ""
 msgid "Data"
 msgstr ""
 
-msgid "Vacature content"
+msgid "Portfolio content"
 msgstr ""
 
-msgid "Vacature settings"
+msgid "Project settings"
 msgstr ""
 
 msgid "General settings"
@@ -156,10 +156,10 @@ msgstr ""
 msgid "Data fields"
 msgstr ""
 
-msgid "Vacature title"
+msgid "Portfolio title"
 msgstr ""
 
-msgid "Vacature text"
+msgid "Portfolio text"
 msgstr ""
 
 msgid "Image"
