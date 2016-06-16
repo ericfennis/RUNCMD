@@ -37,8 +37,20 @@ footer ul {
 footer .button {
 	margin-top: 32px;
 }
+footer.uk-contrast .uk-nav-side>li>a {
+	border:0;
+}
+footer.uk-contrast .uk-nav-side>li>a:hover {
+	text-decoration: none;
+}
+footer .uk-form-row input {
+	    width: 100%;
+    max-width: 280px !important;
+    border-color: #ccc;
+}
 a.sponsors {
 	display: block;
+	margin-bottom: 40px;
 }
 a.sponsors:hover {
 	opacity: .5;

@@ -8379,7 +8379,7 @@ a.uk-thumbnail:focus {
     border-top-color: rgba(255, 255, 255, 0.05)
 }
 
-.uk-contrast .uk-form select,
+/*.uk-contrast .uk-form select,
 .uk-contrast .uk-form textarea,
 .uk-contrast .uk-form input:not([type]),
 .uk-contrast .uk-form input[type="text"],
@@ -8422,7 +8422,7 @@ a.uk-thumbnail:focus {
     border-color: #fff;
     background: transparent;
     color: #fff
-}
+}*/
 
 .uk-contrast .uk-form:-ms-input-placeholder {
     color: rgba(255, 255, 255, 0.7) !important

@@ -113,9 +113,11 @@
 <!--Footer!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
                 <?php if ($view->position()->exists('footer')) : ?>
                 <footer class="uk-contrast">
+
                     <?= $view->render('footer') ?>
                     <div class="uk-container uk-container-center uk-grid">
-                    <nav class="uk-width-large-1-4" id="footer-menu">
+                    <?= $view->position('footer', 'position-grid-footer.php') ?>
+                    <!-- <nav class="uk-width-large-1-4" id="footer-menu">
                         <h3>Menu</h3>
                         <ul>
                             <a href=""><li>Wie zijn wij?</li></a>
@@ -139,7 +141,7 @@
                         <h3>Sponsoren</h3>
                         <a class="sponsors" href="https://www.sterc.nl/"><img width="190" height="120" src="packages/pagekit/theme-brick/img/sterc.svg"></a>
                         <a class="sponsors" href="https://www.nhl.nl/"><img width="190" height="120" src="packages/pagekit/theme-brick/img/nhl.svg"></a>
-                    </section>
+                    </section> -->
                     </div>
                 </footer>
                 <?php endif; ?>
