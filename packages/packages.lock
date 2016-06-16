@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a0faa79072ce61fd0ed6518cda097bdc",
-    "content-hash": "09ca86676a8e1a1ea7f1a5f0d81e5291",
+    "hash": "e2aa3fe05709769e8ead522e5be3610a",
+    "content-hash": "f35cede9333220546f5c72ac858af025",
     "packages": [
         {
             "name": "abeautifulsite/simpleimage",
@@ -320,6 +320,38 @@
                 }
             ],
             "description": "A blog extensions with a built-in comment system."
+        },
+        {
+            "name": "pagekit/calendar",
+            "version": "1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "C:\\Developing\\Projecten\\runcmd/tmp/packages\\pagekit-calendar-1.0.0.zip",
+                "reference": null,
+                "shasum": "ceb658105cfd0a71f6d4c68b17d50fc566e16f2f"
+            },
+            "archive": {
+                "exclude": [
+                    "node_modules",
+                    "!/app"
+                ]
+            },
+            "type": "pagekit-extension",
+            "extra": {
+                "icon": "icon.svg",
+                "scripts": "scripts.php"
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric Fennis",
+                    "email": "mail@ericf.nl",
+                    "homepage": "http://ericf.nl"
+                }
+            ],
+            "description": "Calendar module for RUN CMD events"
         },
         {
             "name": "pagekit/theme-one",

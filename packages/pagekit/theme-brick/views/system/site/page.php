@@ -1,5 +1,5 @@
 <?php if(!empty($page->content)): ?>
-<article class="uk-article<?= $node->theme['alignment'] ? ' uk-text-center' : '' ?>">
+<article class="uk-grid uk-article<?= $node->theme['alignment'] ? ' uk-text-center' : '' ?>">
 
     <?php if (!$node->theme['title_hide']) : ?>
     <h1 class="<?= $node->theme['title_large'] ? 'uk-heading-large' : 'uk-article-title' ?>"><?= $page->title ?></h1>

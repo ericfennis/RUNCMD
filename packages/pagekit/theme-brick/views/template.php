@@ -89,13 +89,13 @@
 
                 <main id="tm-main" class="tm-main">
                     
-                        <div class="uk-container uk-container-center uk-grid" data-uk-grid-match data-uk-grid-margin>
+                        <div class="uk-container uk-container-center" data-uk-grid-match data-uk-grid-margin>
                                 
                               
                                 <?= $view->render('content') ?>
                              
                                 <?php if ($view->position()->exists('hero')) : ?>
-                                        <?= $view->position('homepage', 'position-grid.php') ?>
+                                        <?= $view->position('homepage', 'position-grid-homepage.php') ?>
                                 <?php endif; ?>
                         </div>
                     
@@ -114,7 +114,7 @@
                 <?php if ($view->position()->exists('footer')) : ?>
                 <footer class="uk-contrast">
 
-                    <?= $view->render('footer') ?>
+                  
                     <div class="uk-container uk-container-center uk-grid">
                     <?= $view->position('footer', 'position-grid-footer.php') ?>
                     <!-- <nav class="uk-width-large-1-4" id="footer-menu">
