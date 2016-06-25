@@ -65,7 +65,8 @@ return [
             // A unique node that cannot be deleted, resides in "Not Linked" by default
             'protected' => true
 
-        ]
+        ],
+        
 
     ],
 
@@ -96,6 +97,14 @@ return [
             'controller' => [
                 'Pagekit\\Calendar\\Controller\\EventApiController'
             ]
+        ],
+        '@todo' => [
+
+            // which path this extension should be mounted to
+            'path' => '/events',
+
+            // which controller to mount
+            'controller' => 'Pagekit\\Calendar\\Controller\\CalendarController'
         ]
 
     ],

@@ -4,9 +4,15 @@
 <article class="uk-article uk-container uk-container-center">
         <div class="uk-grid-width-1-1 uk-grid-width-small-1-1 uk-grid-width-large-1-3 uk-grid-width-xlarge-1-3" data-uk-grid="{gutter: 40}">
 
-        
+<?php  
+
+    $noContent = array('content'=>"<div class=uk-panel><h3>Sorry er zijn voorlopig geen evenementen</h3></div>"); 
+
+?>
 
 <?php foreach ($events as $event) : ?>
+<?php if(time() < $event->eventDate->getTimestamp()): ?>
+  
 <?php 
     date_default_timezone_set('Europe/Amsterdam');
     $date = $event->eventDate->getTimestamp();
@@ -41,6 +47,13 @@
         
             </div>
         </div>
+    <?php else: ?>
+        
+            <h3 class="uk-center">Sorry er zijn voorlopig geen aankomende evenementen.</h3>
+       
+
+    <?php break; ?>
+    <?php endif; ?>
 <?php endforeach ?>
 
        </div>

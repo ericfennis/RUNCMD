@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e2aa3fe05709769e8ead522e5be3610a",
-    "content-hash": "f35cede9333220546f5c72ac858af025",
+    "hash": "9c794c72c67308b4b5b5d5d6b27534fb",
+    "content-hash": "6bffaa3789e0723bc968da7c15ded96d",
     "packages": [
         {
             "name": "abeautifulsite/simpleimage",
@@ -388,6 +388,28 @@
                 }
             ],
             "description": "Pagekit's default theme."
+        },
+        {
+            "name": "vision/recent-blog-posts",
+            "version": "0.2.1",
+            "dist": {
+                "type": "zip",
+                "url": "C:\\Developing\\Projecten\\runcmd/tmp/packages\\vision-recent-blog-posts-0.2.1.zip",
+                "reference": null,
+                "shasum": "3309fb4e2e842f6d983115d990ec39713f180f86"
+            },
+            "type": "pagekit-extension",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vision",
+                    "email": "y.paiha@gmail.com",
+                    "homepage": ""
+                }
+            ],
+            "description": "A recent blog posts widget"
         }
     ],
     "packages-dev": [],

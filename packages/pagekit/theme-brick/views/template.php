@@ -94,11 +94,14 @@
                               
                                 <?= $view->render('content') ?>
                              
-                                <?php if ($view->position()->exists('hero')) : ?>
+                                <?php if ($view->position()->exists('hero') && $view->position()->exists('homepage')) : ?>
                                         <?= $view->position('homepage', 'position-grid-homepage.php') ?>
                                 <?php endif; ?>
                         </div>
                     
+                        <?php if ($view->position()->exists('hero') && $view->position()->exists('homepage_bottom')) : ?>
+                            <?= $view->position('homepage_bottom', 'position-grid-homepage-bottom.php') ?>
+                        <?php endif; ?>
                 </main>
 
                 <?php if ($view->position()->exists('bottom')) : ?>
@@ -110,6 +113,10 @@
 
                 </div>
                 <?php endif; ?>
+
+                
+
+
 <!--Footer!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
                 <?php if ($view->position()->exists('footer')) : ?>
                 <footer class="uk-contrast">

@@ -26,7 +26,8 @@ return [
         'bottom' => 'Bottom',
         'footer' => 'Footer',
         'offcanvas' => 'Offcanvas',
-        'homepage' => 'Homepage'
+        'homepage' => 'Homepage',
+        'homepage_bottom' => 'Homepage bottom'
     ],
 
     /**

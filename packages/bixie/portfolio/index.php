@@ -147,7 +147,7 @@ return [
 			'tags_align' => 'uk-flex-center',
 			'tags_position' => 'sidebar',
 			'show_navigation' => 'bottom',
-			'thumbsize' => ['width' => 400, 'height' => ''],
+			'thumbsize' => ['width' => 200, 'height' => ''],
 			'overlay_title_size' => 'uk-h3',
 			'overlay' => 'uk-overlay uk-overlay-hover',
 			'overlay_position' => '',

@@ -1,7 +1,7 @@
 <?php return array (
   'application' => 
   array (
-    'debug' => false,
+    'debug' => true,
   ),
   'database' => 
   array (
@@ -39,6 +39,6 @@
   ),
   'debug' => 
   array (
-    'enabled' => false,
+    'enabled' => true,
   ),
 );
