@@ -20,7 +20,7 @@ class PortfolioImageHelper extends Helper {
 	public function __construct (App $app) {
 		$this->app = $app;
 	}
-
+	
 	/**
 	 * Set shortcuts.
 	 * @param string $name

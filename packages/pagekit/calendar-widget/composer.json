@@ -1,0 +1,15 @@
+{
+    "name": "pagekit/calendar-widget",
+    "type": "pagekit-extension",
+    "version": "0.0.1",
+    "title": "Calendar widget",
+    "description": "Calendar widget for RUN CMD website",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eric Fennis",
+            "email": "mail@ericf.nl",
+            "homepage": "http://ericf.nl"
+        }
+    ]
+}

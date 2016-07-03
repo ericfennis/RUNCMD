@@ -92,6 +92,18 @@
                         <div class="uk-container uk-container-center" data-uk-grid-match data-uk-grid-margin>
                                 
                               
+                                <?php 
+                                    // use Ericf\Imagestyler\Src\ImageStyler as Istyler;
+
+                                    // $styledimg = Istyler::imagestyle('/storage/activity-aviation-fly-2302.jpg');
+                                    //echo $params['imagestyler']('haa');
+                                    // echo $styledimg;
+                                   // echo $ImageStyler;
+                                    //$Testimage = array('src'=>'/storage/activity-aviation-fly-2302.jpg');
+                                    //$config = 400;
+                                    // echo $view->ImageStyler('themeImage','/storage/activity-aviation-fly-2302.jpg');
+                                ?>
+
                                 <?= $view->render('content') ?>
                              
                                 <?php if ($view->position()->exists('hero') && $view->position()->exists('homepage')) : ?>
@@ -120,7 +132,7 @@
 <!--Footer!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
                 <?php if ($view->position()->exists('footer')) : ?>
                 <footer class="uk-contrast">
-
+                    
                   
                     <div class="uk-container uk-container-center uk-grid">
                     <?= $view->position('footer', 'position-grid-footer.php') ?>

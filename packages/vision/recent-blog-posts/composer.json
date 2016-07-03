@@ -1,0 +1,15 @@
+{
+    "name": "vision/recent-blog-posts",
+    "type": "pagekit-extension",
+    "version": "0.2.1",
+    "title": "Recent Blog Post",
+    "description": "A recent blog posts widget",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vision",
+            "email": "y.paiha@gmail.com",
+            "homepage": ""
+        }
+    ]
+}

@@ -99,7 +99,10 @@ return [
         /**
          * Custom markup calculations based on theme settings
          */
+        
         'view.layout' => function ($event, $view) use ($app) {
+
+
 
             if ($app->isAdmin()) {
                 return;
@@ -149,7 +152,14 @@ return [
             $classes['sticky'] = 'data-uk-sticky=\''.json_encode($sticky).'\'';
 
             $params['classes'] = $classes;
+
         },
+
+        // 'ImageStyler' => function ($style, $src) use ($app) {
+        //     // $imageStyler = $app::Module('ericf/imagestyler');
+
+        //     // $imagestyler
+        // },
 
         'view.system/site/widget-menu' => function ($event, $view) {
 

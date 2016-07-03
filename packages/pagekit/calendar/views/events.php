@@ -11,7 +11,7 @@
 ?>
 
 <?php foreach ($events as $event) : ?>
-<?php if(time() < $event->eventDate->getTimestamp()): ?>
+<?php if($event->eventDate->getTimestamp() < time()): ?>
   
 <?php 
     date_default_timezone_set('Europe/Amsterdam');
@@ -25,7 +25,7 @@
                     <?php if ($image = $event->get('image.src')): ?>
                                 <a class="uk-display-block" href="<?= $view->url('@calendar/id', ['id' => $event->id]) ?>">
                                     <div class="lock-ratio">
-                                        <img src="<?= $image ?>" alt="<?= $event->get('image.alt') ?>">
+                                        <img src="<?= $view->ImageStyler('themeImage',$image); ?>" alt="<?= $event->get('image.alt') ?>">
                                     </div>
                                 </a>
                 <?php endif ?>
@@ -49,7 +49,7 @@
         </div>
     <?php else: ?>
         
-            <h3 class="uk-center">Sorry er zijn voorlopig geen aankomende evenementen.</h3>
+            <h3 class="uk-center">Sorry, er zijn voorlopig geen aankomende evenementen.</h3>
        
 
     <?php break; ?>

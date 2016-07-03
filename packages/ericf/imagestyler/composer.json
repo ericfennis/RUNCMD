@@ -1,0 +1,23 @@
+{
+  "name": "ericf/imagestyler",
+  "module": "ericf/imagestyler",
+  "type": "pagekit-extension",
+  "version": "0.0.1",
+  "title": "Image Styler",
+  "description": "Create image styles for Images, example to crop images.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Eric Fennis",
+      "email": "smail@ericf.nl",
+      "homepage": "lpwebdesign.nl"
+    }
+  ],
+  "extra": {
+    "icon": "icon.svg",
+    "scripts": "scripts.php"
+  },
+  "require": {
+    "abeautifulsite/simpleimage": "2.5.*"
+  }
+}
