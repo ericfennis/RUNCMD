@@ -23,20 +23,20 @@ $config['project_sidebar'] = ($config['project']['tags_position'] == 'sidebar'
 
 $config['project_image_class'] = in_array($config['project']['image_align'], ['right', 'left']) ? 'uk-align-' . $config['project']['image_align'] : 'uk-text-center'
 ?>
-<article id="portfolio-project">
+<article id="portfolio-project" style="padding: 0 15px;">
 
-	<?php if (in_array($config['project']['show_navigation'], ['both', 'top']) && ($next || $previous)) : ?>
-		<ul class="uk-pagination">
-			<?php if ($previous) : ?>
-				<li class="uk-pagination-previous"><a href="<?= $app->url('@vacatures/id', ['id' => $previous->id]) ?>">
-						<i class="uk-icon-arrow-left uk-margin-small-right"></i><?= $previous->title ?></a></li>
-			<?php endif; ?>
-			<?php if ($next) : ?>
-				<li class="uk-pagination-next"><a href="<?= $app->url('@vacatures/id', ['id' => $next->id]) ?>">
-						<?= $next->title ?><i class="uk-icon-arrow-right uk-margin-small-left"></i></a></li>
-			<?php endif; ?>
-		</ul>
-	<?php endif; ?>
+
+	<ul class="uk-pagination">
+		<?php if ($previous) : ?>
+			<li class="uk-pagination-previous"><a href="<?= $app->url('@portfolio/id', ['id' => $previous->id]) ?>">
+					<i class="uk-icon-arrow-left uk-margin-small-right"></i><?= $previous->title ?></a></li>
+		<?php endif; ?>
+		<?php if ($next) : ?>
+			<li class="uk-pagination-next"><a href="<?= $app->url('@portfolio/id', ['id' => $next->id]) ?>">
+					<?= $next->title ?><i class="uk-icon-arrow-right uk-margin-small-left"></i></a></li>
+		<?php endif; ?>
+	</ul>
+
 
 	<h1 class="uk-article-title"><?= $project->title ?></h1>
 
@@ -75,6 +75,7 @@ $config['project_image_class'] = in_array($config['project']['image_align'], ['r
 
 		<?= $project->content ?>
 
+		<a href="mailto:info@svruncmd.nl" class="button blauw box-shadow" id="lid-font">Soliciteer nu!</a>
 	</div>
 
 	<?php if ($config['project']['tags_position'] == 'content-bottom' && count($project->tags)) : ?>
@@ -128,7 +129,6 @@ $config['project_image_class'] = in_array($config['project']['image_align'], ['r
 						</div>
 					<?php endif; ?>
 
-				
 			</div>
 		</div>
 
@@ -160,19 +160,4 @@ $config['project_image_class'] = in_array($config['project']['image_align'], ['r
 			</div>
 		<?php endforeach; ?>
 	</div>
-
-	<?php if (in_array($config['project']['show_navigation'], ['both', 'bottom']) && ($next || $previous)) : ?>
-		<ul class="uk-pagination">
-		<?php if ($previous) : ?>
-			<li class="uk-pagination-previous"><a href="<?= $app->url('@vacatures/id', ['id' => $previous->id]) ?>">
-					<i class="uk-icon-arrow-left uk-margin-small-right"></i><?= $previous->title ?></a></li>
-		<?php endif; ?>
-			<?php if ($next) : ?>
-			<li class="uk-pagination-next"><a href="<?= $app->url('@vacatures/id', ['id' => $next->id]) ?>">
-					<?= $next->title ?><i class="uk-icon-arrow-right uk-margin-small-left"></i></a></li>
-		<?php endif; ?>
-		</ul>
-	<?php endif; ?>
-
 </article>
-
