@@ -56,8 +56,8 @@ $config['portfolio_image_class'] = in_array($config['portfolio_image_align'], ['
 		</ul>
 	</div>
 	<?php endif; ?>
-	
-	<div class="uk-grid <?= $grid ?>" data-uk-grid="{gutter: <?= $config['columns_gutter'] ?>, controls: '<?= $config['filter_tags'] ? '#portfolio-filter': ''; ?>'}">
+
+	<div class="uk-grid uk-grid-width-1-1 uk-grid-width-small-1-1 uk-grid-width-large-1-2 uk-grid-width-xlarge-1-2" data-uk-grid="{gutter: <?= $config['columns_gutter'] ?>, controls: '<?= $config['filter_tags'] ? '#portfolio-filter': ''; ?>'}">
 
 		<?php foreach ($projects as $project) : ?>
 
