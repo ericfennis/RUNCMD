@@ -49,15 +49,7 @@ module.exports = {
 
             return [{ label: this.$trans('Filter by'), options: options }];
         }
-
-        // authors: function() {
-
-        //     var options = _.map(this.$data.authors, function (author) {
-        //         return { text: author.username, value: author.user_id };
-        //     });
-
-        //     return [{ label: this.$trans('Filter by'), options: options }];
-        // }
+        
     },
 
     methods: {

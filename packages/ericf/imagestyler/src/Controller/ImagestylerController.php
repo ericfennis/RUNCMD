@@ -65,6 +65,11 @@ class ImagestylerController
                 '$data' => [
 					'config' => App::module('ericf/imagestyler')->config(),
                 	'style'  => $style,
+                	'style_settings' => [ 
+                		'resize' => __('Resize'),
+                		'best_fit' =>  __('Best Fit'),
+                		'thumbnail' =>  __('Thumbnail')
+                	]
                 ],
                 'style' => $style
             ];

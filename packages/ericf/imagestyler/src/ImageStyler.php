@@ -31,6 +31,15 @@ class ImageStyler extends Helper {
 				'height'=> 360
 
 			],
+			'calendar' => [
+
+				'name' 	=> 'best_fit',
+
+				'width'	=> 480,
+
+				'height'=> 360
+
+			],
 
 	];
 	/**
@@ -61,7 +70,7 @@ class ImageStyler extends Helper {
 		//$src = trim($src, '/');
 		$pttrn  = '/\.(jpg|jpeg|gif|png)$/i';
 		
-		if(array_key_exists('themeImage', $styleList)){
+		if(array_key_exists($style, $styleList)){
 			return $this->styleImg($style,$src);
 		} else {
 
@@ -79,10 +88,9 @@ class ImageStyler extends Helper {
 	}
 
 	private function styleImg ($style, $src) {
-		$options['height'] = 300;
-		$options['width'] = 500;
 		$cachepath = $this->getCachePath($src, $style);
-
+		$styleList = $this->styleList;
+		
 		try {
 
 			$cachepath = $this->getCachePath($src, $style);
@@ -92,26 +100,38 @@ class ImageStyler extends Helper {
 				$image = new SimpleImage(App::path() . '/' . $src);
 
 
-				// switch ($style) {
-				// 	case 'resize':
-				// 		# code...
-				// 		break;
-				// 	case 'best_fit':
-				// 		# code...
-				// 		break;
-				// 	case 'thumbnail':
-				// 		# code...
-				// 		break;
-				// }
-
-				if (!empty($options['width']) && empty($options['height'])) {
-					$image->fit_to_width($options['width']);
-				}
-				if (!empty($options['height']) && empty($options['width'])) {
-					$image->fit_to_height($options['height']);
-				}
-				if (!empty($options['height']) && !empty($options['width'])) {
-					$image->thumbnail($options['width'], $options['height']);
+				switch ($styleList[$style]['name']) {
+					case 'resize':
+						if (!empty($styleList['resize']['height']) && !empty($styleList['resize']['width'])) {
+							$image->resize($styleList['resize']['width'], $styleList['resize']['height']);
+						}
+						break;
+					case 'best_fit':
+						if (!empty($styleList[$style]['width']) && empty($styleList[$style]['height'])) {
+							$image->fit_to_width($styleList[$style]['width']);
+						}
+						if (!empty($styleList[$style]['height']) && empty($styleList[$style]['width'])) {
+							$image->fit_to_height($styleList[$style]['height']);
+						}
+						if (!empty($styleList[$style]['height']) && !empty($styleList[$style]['width'])) {
+							$image->thumbnail($styleList[$style]['width'], $styleList[$style]['height']);
+						}
+						break;
+					case 'thumbnail':
+						if (!empty($styleList['thumbnail']['width']) && empty($styleList['thumbnail']['height'])) {
+							$image->fit_to_width($styleList['thumbnail']['width']);
+						}
+						if (!empty($styleList['thumbnail']['height']) && empty($styleList['thumbnail']['width'])) {
+							$image->fit_to_height($styleList['thumbnail']['height']);
+						}
+						if (!empty($styleList['thumbnail']['height']) && !empty($styleList['thumbnail']['width'])) {
+							$image->thumbnail($styleList['thumbnail']['width'], $styleList['thumbnail']['height']);
+						}
+						break;
+					default:
+       					if (!empty($styleList['thumbnail']['height']) && !empty($styleList['thumbnail']['width'])) {
+							$image->thumbnail($styleList['thumbnail']['width'], $styleList['thumbnail']['height']);
+						}
 				}
 
 				$image->save($cachepath);

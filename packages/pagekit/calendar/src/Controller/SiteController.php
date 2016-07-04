@@ -45,14 +45,21 @@ class SiteController
 
         $query->offset(($page - 1) * $limit)->limit($limit)->orderBy('eventDate', 'ASC');
 
-        foreach ($events = $query->get() as $event) {
+        foreach ($eventsDB = $query->get() as $event) {
             $event->excerpt = App::content()->applyPlugins($event->excerpt, ['event' => $event, 'markdown' => $event->get('markdown')]);
             $event->content = App::content()->applyPlugins($event->content, ['event' => $event, 'markdown' => $event->get('markdown'), 'readmore' => true]);
         }
 
+        $events = array();
+
+        foreach ($eventsDB as $event) {
+            if ($event->eventDate->getTimestamp() > strtotime("today")) {
+                array_push ($events, $event);
+            }
+        }
         return [
             '$view' => [
-                'title' => __('Calendar'),
+                'title' => __('Events'),
                 'name' => 'calendar/events.php'
             ],
             'calendar' => $this->calendar,

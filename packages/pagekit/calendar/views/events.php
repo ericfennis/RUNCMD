@@ -2,16 +2,18 @@
 <?php $view->script('events', 'calendar:app/bundle/events.js', ['uikit-grid', 'jquery']) ?>
 
 <article class="uk-article uk-container uk-container-center">
-        <div class="uk-grid-width-1-1 uk-grid-width-small-1-1 uk-grid-width-large-1-3 uk-grid-width-xlarge-1-3" data-uk-grid="{gutter: 40}">
-
+<h1>Events</h1>
+        <div class="uk-clearfix uk-grid-width-1-1 uk-grid-width-small-1-1 uk-grid-width-large-1-3 uk-grid-width-xlarge-1-3" data-uk-grid="{gutter: 40}">
+    
 <?php  
 
     $noContent = array('content'=>"<div class=uk-panel><h3>Sorry er zijn voorlopig geen evenementen</h3></div>"); 
 
 ?>
+<?php //print_r($events) ?>
 
 <?php foreach ($events as $event) : ?>
-<?php if($event->eventDate->getTimestamp() < time()): ?>
+
   
 <?php 
     date_default_timezone_set('Europe/Amsterdam');
@@ -25,7 +27,7 @@
                     <?php if ($image = $event->get('image.src')): ?>
                                 <a class="uk-display-block" href="<?= $view->url('@calendar/id', ['id' => $event->id]) ?>">
                                     <div class="lock-ratio">
-                                        <img src="<?= $view->ImageStyler('themeImage',$image); ?>" alt="<?= $event->get('image.alt') ?>">
+                                        <img src="<?= $view->ImageStyler('calendar',$image); ?>" alt="<?= $event->get('image.alt') ?>">
                                     </div>
                                 </a>
                 <?php endif ?>
@@ -47,13 +49,7 @@
         
             </div>
         </div>
-    <?php else: ?>
-        
-            <h3 class="uk-center">Sorry, er zijn voorlopig geen aankomende evenementen.</h3>
-       
 
-    <?php break; ?>
-    <?php endif; ?>
 <?php endforeach ?>
 
        </div>

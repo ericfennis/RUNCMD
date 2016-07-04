@@ -50,7 +50,7 @@ window.Post = {
 
                 this.$set('event', data.event);
 
-                this.$notify('Post saved.');
+                this.$notify('Event saved.');
 
             }, function (res) {
                 this.$notify(res.data, 'danger');

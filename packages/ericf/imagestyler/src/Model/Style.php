@@ -18,8 +18,11 @@ class Style implements \JsonSerializable
     /** @Column(type="string") */
     public $title;
 
-    /** @Column(type="json_array") */
+    /** @Column(type="string") */
     public $style;
+
+    /** @Column(type="json_array") */
+    public $style_settings;
 
     /**
      * {@inheritdoc}
