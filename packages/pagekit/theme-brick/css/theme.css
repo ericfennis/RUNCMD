@@ -183,7 +183,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: inherit;
 }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-    text-decoration: none;  
+    text-decoration: none;
 }
 h1,
 .uk-h1 {
@@ -191,7 +191,7 @@ h1,
     line-height: 42px;
     font-weight: bold;
     font-style: italic;
-}	
+}
 
 h2,
 .uk-h2 {
@@ -202,7 +202,7 @@ h2,
 h3,
 .uk-h3 {
     font-size: 24px;
-    line-height: 28px;	
+    line-height: 28px;
     color: #a0cd46;
     font-style: italic;
     font-weight: bold;
@@ -2079,7 +2079,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
     padding: 0;
     list-style: none;
     text-align: center;
-    font-size: .001px
+    font-size: .001px;
+    width: 100%
 }
 
 .uk-pagination:before,
@@ -9527,7 +9528,6 @@ html {
 
 @media (min-width:768px) {
     .tm-main .uk-pagination {
-        margin-top: 45px;
-        margin-bottom: -45px
+        margin-top: -40px;
     }
 }
