@@ -61,7 +61,7 @@
 
 		<?php if ($config['teaser']['show_readmore']) : ?>
 			<div class="<?= $config['teaser']['readmore_align']; ?>">
-				<a class="<?= $config['teaser']['read_more_style'] ?>"
+				<a class="button button-small"
 				   href="<?= $app->url('@portfolio/id', ['id' => $project->id]) ?>">
 					<?= $config['teaser']['read_more'] ?></a>
 			</div>
